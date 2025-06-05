@@ -1,0 +1,17 @@
+F:\proekt\BusinessLayer\bin\Debug\net8.0\BusinessLayer.deps.json
+F:\proekt\BusinessLayer\bin\Debug\net8.0\BusinessLayer.runtimeconfig.json
+F:\proekt\BusinessLayer\bin\Debug\net8.0\BusinessLayer.dll
+F:\proekt\BusinessLayer\bin\Debug\net8.0\BusinessLayer.pdb
+F:\proekt\BusinessLayer\bin\Debug\net8.0\DataLayer.dll
+F:\proekt\BusinessLayer\bin\Debug\net8.0\DataLayer.pdb
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.AssemblyReference.cache
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+F:\proekt\BusinessLayer\obj\Debug\net8.0\Business.EA331CBA.Up2Date
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
+F:\proekt\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
+F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.genruntimeconfig.cache
+F:\proekt\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll

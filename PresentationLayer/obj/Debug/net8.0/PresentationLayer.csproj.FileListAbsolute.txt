@@ -1,0 +1,5 @@
+F:\proekt\PresentationLayer\obj\Debug\net8.0\PresentationLayer.csproj.AssemblyReference.cache
+F:\proekt\PresentationLayer\obj\Debug\net8.0\PresentationLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\proekt\PresentationLayer\obj\Debug\net8.0\PresentationLayer.AssemblyInfoInputs.cache
+F:\proekt\PresentationLayer\obj\Debug\net8.0\PresentationLayer.AssemblyInfo.cs
+F:\proekt\PresentationLayer\obj\Debug\net8.0\PresentationLayer.csproj.CoreCompileInputs.cache

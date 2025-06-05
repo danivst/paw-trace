@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\proekt\\PawTrace\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E845B84C-D952-44C1-9C78-BE32ED02F3D4}|..\\PresentationLayer\\PresentationLayer.csproj|f:\\proekt\\presentationlayer\\display.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E845B84C-D952-44C1-9C78-BE32ED02F3D4}|..\\PresentationLayer\\PresentationLayer.csproj|f:\\proekt\\presentationlayer\\presentationlayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E845B84C-D952-44C1-9C78-BE32ED02F3D4}|..\\PresentationLayer\\PresentationLayer.csproj|f:\\proekt\\presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{931A860D-E46A-4E97-BF93-2B20B7154BDD}|PawTrace.csproj|f:\\proekt\\pawtrace\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{931A860D-E46A-4E97-BF93-2B20B7154BDD}|PawTrace.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\models\\lostanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81A56B3F-6BE5-4E02-9FD7-C81E7623821E}|..\\BusinessLayer\\BusinessLayer.csproj|f:\\proekt\\businesslayer\\lostanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\models\\foundanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81A56B3F-6BE5-4E02-9FD7-C81E7623821E}|..\\BusinessLayer\\BusinessLayer.csproj|f:\\proekt\\businesslayer\\foundanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81A56B3F-6BE5-4E02-9FD7-C81E7623821E}|..\\BusinessLayer\\BusinessLayer.csproj|f:\\proekt\\businesslayer\\icontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\projectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA8DD13-C550-471C-BCCE-FE8E5584E866}|..\\DataLayer\\DataLayer.csproj|f:\\proekt\\datalayer\\datalayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 201,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Display.cs",
+              "DocumentMoniker": "F:\\proekt\\PresentationLayer\\Display.cs",
+              "RelativeDocumentMoniker": "..\\PresentationLayer\\Display.cs",
+              "ToolTip": "F:\\proekt\\PresentationLayer\\Display.cs",
+              "RelativeToolTip": "..\\PresentationLayer\\Display.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwIMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:45:04.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PresentationLayer",
+              "DocumentMoniker": "F:\\proekt\\PresentationLayer\\PresentationLayer.csproj",
+              "RelativeDocumentMoniker": "..\\PresentationLayer\\PresentationLayer.csproj",
+              "ToolTip": "F:\\proekt\\PresentationLayer\\PresentationLayer.csproj",
+              "RelativeToolTip": "..\\PresentationLayer\\PresentationLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-05T16:51:26.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\proekt\\PresentationLayer\\Program.cs",
+              "RelativeDocumentMoniker": "..\\PresentationLayer\\Program.cs",
+              "ToolTip": "F:\\proekt\\PresentationLayer\\Program.cs",
+              "RelativeToolTip": "..\\PresentationLayer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:51:20.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LostAnimal.cs",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\Models\\LostAnimal.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\LostAnimal.cs",
+              "ToolTip": "F:\\proekt\\DataLayer\\Models\\LostAnimal.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\LostAnimal.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwB0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:42:10.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\Configuration.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Configuration.cs",
+              "ToolTip": "F:\\proekt\\DataLayer\\Configuration.cs",
+              "RelativeToolTip": "..\\DataLayer\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:41:14.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LostAnimalController.cs",
+              "DocumentMoniker": "F:\\proekt\\BusinessLayer\\LostAnimalController.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\LostAnimalController.cs",
+              "ToolTip": "F:\\proekt\\BusinessLayer\\LostAnimalController.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\LostAnimalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:41:02.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\proekt\\PawTrace\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "F:\\proekt\\PawTrace\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:36:21.229Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\Enums.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Enums.cs",
+              "ToolTip": "F:\\proekt\\DataLayer\\Enums.cs",
+              "RelativeToolTip": "..\\DataLayer\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:41:49.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FoundAnimalController.cs",
+              "DocumentMoniker": "F:\\proekt\\BusinessLayer\\FoundAnimalController.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\FoundAnimalController.cs",
+              "ToolTip": "F:\\proekt\\BusinessLayer\\FoundAnimalController.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\FoundAnimalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:40:29.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FoundAnimal.cs",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\Models\\FoundAnimal.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\FoundAnimal.cs",
+              "ToolTip": "F:\\proekt\\DataLayer\\Models\\FoundAnimal.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\FoundAnimal.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwBkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:42:24.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IController.cs",
+              "DocumentMoniker": "F:\\proekt\\BusinessLayer\\IController.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\IController.cs",
+              "ToolTip": "F:\\proekt\\BusinessLayer\\IController.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\IController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T17:30:51.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectContext.cs",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\ProjectContext.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\ProjectContext.cs",
+              "ToolTip": "F:\\proekt\\DataLayer\\ProjectContext.cs",
+              "RelativeToolTip": "..\\DataLayer\\ProjectContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:41:59.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataLayer",
+              "DocumentMoniker": "F:\\proekt\\DataLayer\\DataLayer.csproj",
+              "RelativeDocumentMoniker": "..\\DataLayer\\DataLayer.csproj",
+              "ToolTip": "F:\\proekt\\DataLayer\\DataLayer.csproj",
+              "RelativeToolTip": "..\\DataLayer\\DataLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-05T16:41:43.732Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

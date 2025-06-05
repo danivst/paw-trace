@@ -1,0 +1,14 @@
+F:\proekt\DataLayer\bin\Debug\net8.0\DataLayer.deps.json
+F:\proekt\DataLayer\bin\Debug\net8.0\DataLayer.runtimeconfig.json
+F:\proekt\DataLayer\bin\Debug\net8.0\DataLayer.dll
+F:\proekt\DataLayer\bin\Debug\net8.0\DataLayer.pdb
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.csproj.AssemblyReference.cache
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.dll
+F:\proekt\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.pdb
+F:\proekt\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
+F:\proekt\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll
