@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawTrace", "PawTrace.csproj", "{931A860D-E46A-4E97-BF93-2B20B7154BDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawTrace", "PawTrace.csproj", "{931A860D-E46A-4E97-BF93-2B20B7154BDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{81A56B3F-6BE5-4E02-9FD7-C81E7623821E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{81A56B3F-6BE5-4E02-9FD7-C81E7623821E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "..\DataLayer\DataLayer.csproj", "{3FA8DD13-C550-471C-BCCE-FE8E5584E866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "..\DataLayer\DataLayer.csproj", "{3FA8DD13-C550-471C-BCCE-FE8E5584E866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "..\PresentationLayer\PresentationLayer.csproj", "{E845B84C-D952-44C1-9C78-BE32ED02F3D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayer", "..\PresentationLayer\PresentationLayer.csproj", "{E845B84C-D952-44C1-9C78-BE32ED02F3D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawTrace.Test", "..\PawTrace.Test\PawTrace.Test.csproj", "{18A4327D-1C3D-4A38-AD15-DDF80300C4D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E845B84C-D952-44C1-9C78-BE32ED02F3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E845B84C-D952-44C1-9C78-BE32ED02F3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E845B84C-D952-44C1-9C78-BE32ED02F3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A4327D-1C3D-4A38-AD15-DDF80300C4D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A4327D-1C3D-4A38-AD15-DDF80300C4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A4327D-1C3D-4A38-AD15-DDF80300C4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A4327D-1C3D-4A38-AD15-DDF80300C4D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

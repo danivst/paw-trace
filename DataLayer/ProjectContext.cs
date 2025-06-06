@@ -16,6 +16,7 @@ namespace DataLayer
 
         public DbSet<FoundAnimal> FoundAnimals { get; set; }
         public DbSet<LostAnimal> LostAnimals { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +31,7 @@ namespace DataLayer
         {
             modelBuilder.Entity<FoundAnimal>();
             modelBuilder.Entity<LostAnimal>();
+            modelBuilder.Entity<Location>();
         }
     }
 }

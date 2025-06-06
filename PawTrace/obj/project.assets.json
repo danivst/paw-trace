@@ -1630,20 +1630,6 @@
         "runtime": {
           "bin/placeholder/DataLayer.dll": {}
         }
-      },
-      "PresentationLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "BusinessLayer": "1.0.0",
-          "DataLayer": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/PresentationLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PresentationLayer.dll": {}
-        }
       }
     }
   },
@@ -4765,11 +4751,6 @@
       "type": "project",
       "path": "../DataLayer/DataLayer.csproj",
       "msbuildProject": "../DataLayer/DataLayer.csproj"
-    },
-    "PresentationLayer/1.0.0": {
-      "type": "project",
-      "path": "../PresentationLayer/PresentationLayer.csproj",
-      "msbuildProject": "../PresentationLayer/PresentationLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4778,8 +4759,7 @@
       "DataLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.5",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.5",
-      "PresentationLayer >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.5"
     ]
   },
   "packageFolders": {
@@ -4820,9 +4800,6 @@
             },
             "F:\\proekt\\DataLayer\\DataLayer.csproj": {
               "projectPath": "F:\\proekt\\DataLayer\\DataLayer.csproj"
-            },
-            "F:\\proekt\\PresentationLayer\\PresentationLayer.csproj": {
-              "projectPath": "F:\\proekt\\PresentationLayer\\PresentationLayer.csproj"
             }
           }
         }

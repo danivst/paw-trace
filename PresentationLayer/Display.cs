@@ -1,17 +1,17 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
-using System.Collections.Generic;
+﻿using BusinessLayer;
+using DataLayer;
+using DataLayer.Models;
+using PawTrace;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-using System.Windows.Forms;
 
 namespace PresentationLayer
 {
     public class Display
     {
+        private FoundAnimalController foundAnimalController = new FoundAnimalController();
+        private LostAnimalController lostAnimalController = new LostAnimalController();
+        private LocationController locationController = new LocationController();
+
         public Display()
         {
             Input();
@@ -19,54 +19,502 @@ namespace PresentationLayer
 
         public void Input()
         {
-
             while (true)
             {
                 Console.Write(new string('-', 25));
                 Console.Write("MENU");
                 Console.Write(new string('-', 25));
                 Console.WriteLine();
-                Console.WriteLine("1. Add lost animal");
-                Console.WriteLine("2. Add found animal");
-                Console.WriteLine("3. Check for matches if you have found a pet");
-                Console.WriteLine("4. Edit lost animal");
-                Console.WriteLine("5. Edit found animal");
-                Console.WriteLine("6. Delete lost animal");
-                Console.WriteLine("7. Delete found animal");
-                Console.WriteLine("8. See all lost animals");
-                Console.WriteLine("9. See all found animals");
-                Console.WriteLine("10. Visual display (Open Windows Forms App)");
-                Console.WriteLine("11. Exit");
+                Console.WriteLine("1. Visual display (Open Windows Forms App)");
+                Console.WriteLine("2. View lost animals menu");
+                Console.WriteLine("3. View found animals menu");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine();
 
                 int option = int.Parse(Console.ReadLine());
 
                 switch (option)
                 {
                     case 1:
+                        Console.WriteLine("Opening Windows Forms App...");
+                        Task.Run(() => Application.Run(new Form1()));
+                        Console.WriteLine("Windows Forms App successfully opened!");
+                        Console.WriteLine();
+                        break;
+
+                    case 2:
+                        InputLostAnimal();
+                        break;
+
+                    case 3:
+                        InputFoundAnimal();
+                        break;
+
+                    case 4:
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
+                }
+            }
+        }
+
+        public void InputLostAnimal()
+        {
+            Console.Write(new string('-', 25));
+            Console.Write("LOST ANIMALS MENU");
+            Console.Write(new string('-', 25));
+            Console.WriteLine();
+            Console.WriteLine("1. Add lost animal");
+            Console.WriteLine("2. Edit lost animal");
+            Console.WriteLine("3. Delete lost animal");
+            Console.WriteLine("4. See all lost animals");
+            Console.WriteLine("5. See all lost animals for a location");
+            Console.WriteLine("6. Go back");
+            Console.WriteLine();
+
+            int option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Console.Write(new string('-', 25));
+                    Console.Write("ADD A LOST ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
+                    Console.WriteLine();
+                    Console.WriteLine("Insert data for pet: (Please note that image insertion is possible only in the Windows Forms App interface)");
+
+                    Console.Write("Name*: ");
+                    string nameAddLost = Console.ReadLine();
+
+                    Console.WriteLine("Gender*:");
+                    Console.WriteLine("1. Female");
+                    Console.WriteLine("2. Male");
+                    Console.WriteLine("3. Castrated");
+                    int genderAddLost = int.Parse(Console.ReadLine());
+
+                    Console.Write("Color*: ");
+                    string colorAddLost = Console.ReadLine();
+
+                    Console.Write("Location* (Format: {city}, {country}): ");
+                    string[] locationAddLost = Console.ReadLine().Split(", ").ToArray();
+                    Location locationLost = new Location
+                    {
+                        City = locationAddLost[0].ToUpper(),
+                        Country = locationAddLost[1].ToUpper()
+                    };
+                    foreach (var l in locationController.GetAll())
+                    {
+                        if (l.City.ToUpper() != locationLost.City.ToUpper() || l.Country.ToUpper() != locationLost.Country.ToUpper())
+                        {
+                            locationController.Add(locationLost);
+                        }
+                    }
+
+                    Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
+                    string dateAddLost = Console.ReadLine();
+                    DateOnly dateLost;
+                    if (!DateOnly.TryParseExact(dateAddLost, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateLost))
+                    {
+                        throw new FormatException("Invalid date format. Expected format: dd/MM/yyyy.");
+                    }
+
+                    Console.WriteLine("Choose a species*:");
+                    Console.WriteLine("1. Cat");
+                    Console.WriteLine("2. Dog");
+                    Console.WriteLine("3. Rabbit");
+                    Console.WriteLine("4. Parrot");
+                    Console.WriteLine("5. Hamster");
+                    Console.WriteLine("6. Guinea pig");
+                    Console.WriteLine("7. Other");
+                    int petAddLost = int.Parse(Console.ReadLine());
+
+                    LostAnimal lostAnimal = new LostAnimal
+                    {
+                        Name = nameAddLost,
+                        Gender = (Gender)genderAddLost,
+                        Color = colorAddLost,
+                        Location = locationLost,
+                        DateLost = dateLost,
+                        Species = (PetType)petAddLost,
+                        Status = StatusType.Lost
+                    };
+
+                    Console.Write("Age (Enter the closest age to the real one in years): ");
+                    string ageAddLost = Console.ReadLine();
+                    if (ageAddLost != "-")
+                    {
+                        lostAnimal.Age = int.Parse(ageAddLost);
+                    }
+
+                    Console.Write("Breed: ");
+                    string breedAddLost = Console.ReadLine();
+                    if (breedAddLost != "-")
+                    {
+                        lostAnimal.Breed = breedAddLost;
+                    }
+
+                    Console.WriteLine("Description:");
+                    string descriptionAddLost = Console.ReadLine();
+                    if (descriptionAddLost != "-")
+                    {
+                        lostAnimal.Description = descriptionAddLost;
+                    }
+
+                    lostAnimalController.Add(lostAnimal);
+
+                    Console.WriteLine("Successfully added a lost animal!");
+                    Console.WriteLine();
+
+                    break;
+
+                case 2:
+                    Console.Write(new string('-', 25));
+                    Console.Write("EDIT A LOST ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.Write("Enter ID to update: ");
+                    int idToUpdate = int.Parse(Console.ReadLine());
+
+                    LostAnimal lostAnimalToUpdate = lostAnimalController.Get(idToUpdate);
+                    if (lostAnimalToUpdate != null)
+                    {
+                        Console.WriteLine("Data for pet:");
+                        lostAnimalToUpdate.ToString();
+                        Console.Write("Do you wish to proceed and edit the information? (Y/N): ");
+                        string input = Console.ReadLine().ToLower();
+
+                        if (input == "y")
+                        {
+                            Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
+                            Console.WriteLine();
+                            Console.WriteLine("Insert data for pet: (Please note that image insertion is possible only in the Windows Forms App interface)");
+
+                            Console.Write("Name*: ");
+                            lostAnimalToUpdate.Name = Console.ReadLine();
+
+                            Console.WriteLine("Gender*:");
+                            Console.WriteLine("1. Female");
+                            Console.WriteLine("2. Male");
+                            Console.WriteLine("3. Castrated");
+                            int genderToUpdate = int.Parse(Console.ReadLine());
+                            lostAnimalToUpdate.Gender = (Gender)genderToUpdate;
+
+                            Console.Write("Color*: ");
+                            lostAnimalToUpdate.Color = Console.ReadLine();
+
+                            Console.Write("Location* (Format: {city}, {country}): ");
+                            string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
+                            Location locationLostToUpdate = new Location
+                            {
+                                City = locationToUpdate[0].ToUpper(),
+                                Country = locationToUpdate[1].ToUpper()
+                            };
+                            foreach (var l in locationController.GetAll())
+                            {
+                                if (l.City.ToUpper() != locationLostToUpdate.City.ToUpper() || l.Country.ToUpper() != locationLostToUpdate.Country.ToUpper())
+                                {
+                                    locationController.Add(locationLostToUpdate);
+                                }
+                            }
+                            lostAnimalToUpdate.Location = locationLostToUpdate;
+
+                            Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
+                            string dateUpdateLost = Console.ReadLine();
+                            DateOnly dateLostToUpdate;
+                            if (!DateOnly.TryParseExact(dateUpdateLost, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateLostToUpdate))
+                            {
+                                throw new FormatException("Invalid date format. Expected format: dd/MM/yyyy.");
+                            }
+                            lostAnimalToUpdate.DateLost = dateLostToUpdate;
+
+                            Console.WriteLine("Choose a species*:");
+                            Console.WriteLine("1. Cat");
+                            Console.WriteLine("2. Dog");
+                            Console.WriteLine("3. Rabbit");
+                            Console.WriteLine("4. Parrot");
+                            Console.WriteLine("5. Hamster");
+                            Console.WriteLine("6. Guinea pig");
+                            Console.WriteLine("7. Other");
+                            int petToUpdateLost = int.Parse(Console.ReadLine());
+                            lostAnimalToUpdate.Species = (PetType)petToUpdateLost;
+
+                            Console.Write("Age (Enter the closest age to the real one in years): ");
+                            string ageToUpdateLost = Console.ReadLine();
+                            if (ageToUpdateLost != "-")
+                            {
+                                lostAnimalToUpdate.Age = int.Parse(ageToUpdateLost);
+                            }
+
+                            Console.Write("Breed: ");
+                            string breedToUpdateLost = Console.ReadLine();
+                            if (breedToUpdateLost != "-")
+                            {
+                                lostAnimalToUpdate.Breed = breedToUpdateLost;
+                            }
+
+                            Console.WriteLine("Description:");
+                            string descriptionToUpdateLost = Console.ReadLine();
+                            if (descriptionToUpdateLost != "-")
+                            {
+                                lostAnimalToUpdate.Description = descriptionToUpdateLost;
+                            }
+
+                            lostAnimalController.Update(lostAnimalToUpdate);
+
+                            Console.WriteLine($"Successfully updated information about lost animal with id {idToUpdate}!");
+                            Console.WriteLine();
+                        }
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 3:
+                    Console.Write(new string('-', 25));
+                    Console.Write("DELETE A LOST ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.Write("Enter ID to delete: ");
+                    int idToDelete = int.Parse(Console.ReadLine());
+
+                    LostAnimal lostAnimalToDelete = lostAnimalController.Get(idToDelete);
+                    if (lostAnimalToDelete != null)
+                    {
+                        Console.WriteLine("Data for pet:");
+                        lostAnimalToDelete.ToString();
+                        Console.Write("Do you wish to proceed and delete the information about the pet? (Y/N): ");
+                        string input = Console.ReadLine().ToLower();
+
+                        if (input == "y")
+                        {
+                            lostAnimalController.Delete(idToDelete);
+                            Console.WriteLine($"Successfully deleted lost animal with id {idToDelete}!");
+                        }
+                    }
+                    
+                    Console.WriteLine();
+
+                    break;
+
+                case 4:
+                    Console.Write(new string('-', 25));
+                    Console.Write("LOST ANIMALS");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    foreach (var animal in lostAnimalController.GetAll())
+                    {
+                        animal.ToString();
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 5:
+                    Console.Write(new string('-', 25));
+                    Console.Write("LOST ANIMALS BY LOCATION");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.WriteLine("Choose a location: ");
+                    foreach(var l in locationController.GetAll())
+                    {
+                        l.ToString();
+                    }
+
+                    int location = int.Parse(Console.ReadLine());
+                    Location locationToFetch = locationController.Get(location);
+                    foreach (var animal in lostAnimalController.GetAll())
+                    {
+                        if (animal.Location == locationToFetch)
+                        {
+                            animal.ToString();
+                        }
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 6:
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
+            }
+        }
+
+        public void InputFoundAnimal()
+        {
+            Console.Write(new string('-', 25));
+            Console.Write("FOUND ANIMALS MENU");
+            Console.Write(new string('-', 25));
+            Console.WriteLine();
+            Console.WriteLine("1. Add found animal");
+            Console.WriteLine("2. Check for matches if you have found a pet");
+            Console.WriteLine("3. Edit found animal");
+            Console.WriteLine("4. Delete found animal");
+            Console.WriteLine("5. See all found animals");
+            Console.WriteLine("6. See all found animals for a location");
+            Console.WriteLine("7. Go back");
+            Console.WriteLine();
+
+            int option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Console.Write(new string('-', 25));
+                    Console.Write("ADD A FOUND ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
+                    Console.WriteLine();
+                    Console.WriteLine("Insert data for pet: (Please note that image insertion is possible only in the Windows Forms App interface)");
+
+                    Console.Write("Name: ");
+                    string nameAddFound = Console.ReadLine();
+
+                    Console.WriteLine("Gender*:");
+                    Console.WriteLine("1. Female");
+                    Console.WriteLine("2. Male");
+                    Console.WriteLine("3. Castrated");
+                    int genderAddFound = int.Parse(Console.ReadLine());
+
+                    Console.Write("Color*: ");
+                    string colorAddFound = Console.ReadLine();
+
+                    Console.Write("Location* (Format: {city}, {country}): ");
+                    string[] locationAddFound = Console.ReadLine().Split(", ").ToArray();
+                    Location locationFound = new Location
+                    {
+                        City = locationAddFound[0].ToUpper(),
+                        Country = locationAddFound[1].ToUpper()
+                    };
+                    foreach (var l in locationController.GetAll())
+                    {
+                        if (l.City.ToUpper() != locationFound.City.ToUpper() || l.Country.ToUpper() != locationFound.Country.ToUpper())
+                        {
+                            locationController.Add(locationFound);
+                        }
+                    }
+
+                    Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
+                    string dateAddFound = Console.ReadLine();
+                    DateOnly dateFound;
+                    if (!DateOnly.TryParseExact(dateAddFound, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateFound))
+                    {
+                        throw new FormatException("Invalid date format. Expected format: dd/MM/yyyy.");
+                    }
+
+                    Console.WriteLine("Choose a species*:");
+                    Console.WriteLine("1. Cat");
+                    Console.WriteLine("2. Dog");
+                    Console.WriteLine("3. Rabbit");
+                    Console.WriteLine("4. Parrot");
+                    Console.WriteLine("5. Hamster");
+                    Console.WriteLine("6. Guinea pig");
+                    Console.WriteLine("7. Other");
+                    int petAddFound = int.Parse(Console.ReadLine());
+
+                    FoundAnimal foundAnimal = new FoundAnimal
+                    {
+                        Gender = (Gender)genderAddFound,
+                        Color = colorAddFound,
+                        Location = locationFound,
+                        DateFound = dateFound,
+                        Species = (PetType)petAddFound,
+                        Status = StatusType.Found
+                    };
+
+                    if (nameAddFound != "-")
+                    {
+                        foundAnimal.Name = nameAddFound;
+                    }
+
+                    Console.Write("Age (Enter the closest age to the real one in years): ");
+                    string ageAddFound = Console.ReadLine();
+                    if (ageAddFound != "-")
+                    {
+                        foundAnimal.Age = int.Parse(ageAddFound);
+                    }
+
+                    Console.Write("Breed: ");
+                    string breedAddFound = Console.ReadLine();
+                    if (breedAddFound != "-")
+                    {
+                        foundAnimal.Breed = breedAddFound;
+                    }
+
+                    Console.WriteLine("Description:");
+                    string descriptionAddFound = Console.ReadLine();
+                    if (descriptionAddFound != "-")
+                    {
+                        foundAnimal.Description = descriptionAddFound;
+                    }
+
+                    foundAnimalController.Add(foundAnimal);
+
+                    Console.WriteLine("Successfully added a lost animal!");
+                    Console.WriteLine();
+
+                    break;
+
+                case 2:
+                    Console.Write(new string('-', 25));
+                    Console.Write("FIND MATCHES");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.Write("Have you found a pet and want to find out if it was lost? (Y/N): ");
+                    string inputMatches = Console.ReadLine().ToLower();
+
+                    if (inputMatches == "y")
+                    {
                         Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
+                        Console.WriteLine();
                         Console.WriteLine("Insert data for pet: (Please note that image insertion is possible only in the Windows Forms App interface)");
 
-                        Console.Write("Name*: ");
+                        Console.Write("Name: ");
                         string name = Console.ReadLine();
 
-                        Console.Write("Gender* (if castrated, type 'castrated'): ");
-                        string gender = Console.ReadLine();
+                        Console.WriteLine("Gender*:");
+                        Console.WriteLine("1. Female");
+                        Console.WriteLine("2. Male");
+                        Console.WriteLine("3. Castrated");
+                        int gender = int.Parse(Console.ReadLine());
 
                         Console.Write("Color*: ");
                         string color = Console.ReadLine();
 
                         Console.Write("Location* (Format: {city}, {country}): ");
-                        string[] location = Console.ReadLine().Split(", ").ToArray();
+                        string[] locationMatches = Console.ReadLine().Split(", ").ToArray();
+                        Location locationFoundMatches = new Location
+                        {
+                            City = locationMatches[0].ToUpper(),
+                            Country = locationMatches[1].ToUpper()
+                        };
 
-                        Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
+                        Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                         string date = Console.ReadLine();
-                        DateOnly dateLost;
-                        if (!DateOnly.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateLost))
+                        DateOnly dateFoundMatches;
+                        if (!DateOnly.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateFoundMatches))
                         {
                             throw new FormatException("Invalid date format. Expected format: dd/MM/yyyy.");
                         }
 
-                        Console.WriteLine("Choose a species*: ");
+                        Console.WriteLine("Choose a species*:");
                         Console.WriteLine("1. Cat");
                         Console.WriteLine("2. Dog");
                         Console.WriteLine("3. Rabbit");
@@ -76,7 +524,7 @@ namespace PresentationLayer
                         Console.WriteLine("7. Other");
                         int pet = int.Parse(Console.ReadLine());
 
-                        Console.Write("Age (Type the closest age to the real one in years): ");
+                        Console.Write("Age (Enter the closest age to the real one in years): ");
                         string age = Console.ReadLine();
 
                         Console.Write("Breed: ");
@@ -85,59 +533,313 @@ namespace PresentationLayer
                         Console.WriteLine("Description:");
                         string description = Console.ReadLine();
 
+                        bool hasName = false; 
+                        if (name != "-")
+                        {
+                            hasName = true;
+                        }
 
-                        break;
+                        bool hasAge = false;
+                        if (age != "-")
+                        {
+                            hasAge = true;
+                        }
 
-                    case 2:
+                        bool hasBreed = false;
+                        if (breed != "-")
+                        {
+                            hasBreed = true;
+                        }
 
-                        break;
+                        Console.WriteLine("Results:");
+                        List<LostAnimal> matches = new List<LostAnimal>();
 
-                    case 3:
+                        foreach (var animal in lostAnimalController.GetAll())
+                        {
+                            if (animal.Gender == (Gender)gender && animal.Color == color && animal.Species == (PetType)pet && animal.Location == locationFoundMatches && (animal.DateLost <= dateFoundMatches))
+                            {
+                                if ((hasName == true && animal.Name == name) || (hasAge == true && animal.Age == int.Parse(age)) || (hasBreed == true && animal.Breed == breed))
+                                {
+                                    animal.ToString();
+                                    matches.Add(animal);
+                                }
+                            }
+                        }
+                        
+                        if (matches.Count == 0)
+                        {
+                            Console.Write("No matches for your search. Would you like to add the pet you have found to the database? (Y/N): ");
+                            string input = Console.ReadLine().ToLower();
 
-                        break;
+                            if (input == "y")
+                            {
+                                FoundAnimal foundAnimalNew = new FoundAnimal
+                                {
+                                    Gender = (Gender)gender,
+                                    Color = color,
+                                    Location = locationFoundMatches,
+                                    DateFound = dateFoundMatches,
+                                    Species = (PetType)pet,
+                                    Status = StatusType.Found
+                                };
 
-                    case 4:
+                                foreach (var l in locationController.GetAll())
+                                {
+                                    if (l.City.ToUpper() != locationFoundMatches.City.ToUpper() || l.Country.ToUpper() != locationFoundMatches.Country.ToUpper())
+                                    {
+                                        locationController.Add(locationFoundMatches);
+                                    }
+                                }
 
-                        break;
+                                if (hasAge)
+                                {
+                                    foundAnimalNew.Age = int.Parse(age);    
+                                }
 
-                    case 5:
+                                if (hasName)
+                                {
+                                    foundAnimalNew.Name = name;
+                                }
 
-                        break;
+                                if (hasBreed)
+                                {
+                                    foundAnimalNew.Breed = breed;
+                                }
 
-                    case 6:
+                                foundAnimalController.Add(foundAnimalNew);
+                            }
+                        }
+                        else if (matches.Count == 1)
+                        {
+                            Console.Write("One match. Is this the pet you have found? (Y/N): ");
+                            string input = Console.ReadLine().ToLower();
 
-                        break;
+                            if (input == "y")
+                            {
+                                LostAnimal animal = matches[0];
+                                animal.Status = StatusType.Found;
+                                foundAnimalController.Delete(animal.Id);
+                                Console.WriteLine($"Successfully marked as found and deleted found animal with id {animal.Id}!");
+                            }
+                        }
+                        else
+                        {
+                            Console.Write("Do any of these pets match the one you have found? (Y/N): ");
+                            string input = Console.ReadLine().ToLower();
+                            Console.WriteLine();
 
-                    case 7:
+                            if (input == "y")
+                            {
+                                Console.Write("Enter the ID of the pet you have found: ");
+                                int id = int.Parse(Console.ReadLine());
+                                bool found = false;
 
-                        break;
+                                foreach (var animal in matches)
+                                {
+                                    if (animal.Id == id)
+                                    {
+                                        found = true;
+                                        animal.Status = StatusType.Found;
+                                        foundAnimalController.Delete(animal.Id);
+                                        Console.WriteLine($"Successfully marked as found and deleted found animal with id {animal.Id}!");
+                                        break;
+                                    }
+                                }
 
-                    case 8:
-                        Console.Write(new string('-', 25));
-                        Console.Write("LOST ANIMALS");
-                        Console.Write(new string('-', 25));
+                                if (found == false)
+                                {
+                                    Console.WriteLine("Invalid ID!");
+                                }
+                            }
+                        }
+                    }
 
-                        break;
+                    Console.WriteLine();
 
-                    case 9:
-                        Console.Write(new string('-', 25));
-                        Console.Write("FOUND ANIMALS");
-                        Console.Write(new string('-', 25));
+                    break;
 
-                        break;
+                case 3:
+                    Console.Write(new string('-', 25));
+                    Console.Write("EDIT A FOUND ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
 
-                    case 10:
-                        Console.WriteLine("Opening Windows Forms App...");
-                        Task.Run(() => Application.Run(new Form1()));
-                        break;
+                    Console.Write("Enter ID to update: ");
+                    int idToUpdate = int.Parse(Console.ReadLine());
 
-                    case 11:
-                        return;
+                    FoundAnimal foundAnimalToUpdate = foundAnimalController.Get(idToUpdate);
+                    if (foundAnimalToUpdate != null)
+                    {
+                        Console.WriteLine("Data for pet:");
+                        foundAnimalToUpdate.ToString();
+                        Console.Write("Do you wish to proceed and edit the information? (Y/N): ");
+                        string input = Console.ReadLine().ToLower();
 
-                    default:
-                        Console.WriteLine("Invalid option");
-                        break;
-                }
+                        if (input == "y")
+                        {
+                            Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
+                            Console.WriteLine();
+                            Console.WriteLine("Insert data for pet: (Please note that image insertion is possible only in the Windows Forms App interface)");
+
+                            Console.Write("Name: ");
+                            string nameToUpdate = Console.ReadLine();
+                            if (nameToUpdate != "-")
+                            {
+                                foundAnimalToUpdate.Name = nameToUpdate;
+                            }
+
+                            Console.WriteLine("Gender*:");
+                            Console.WriteLine("1. Female");
+                            Console.WriteLine("2. Male");
+                            Console.WriteLine("3. Castrated");
+                            int genderToUpdate = int.Parse(Console.ReadLine());
+                            foundAnimalToUpdate.Gender = (Gender)genderToUpdate;
+
+                            Console.Write("Color*: ");
+                            foundAnimalToUpdate.Color = Console.ReadLine();
+
+                            Console.Write("Location* (Format: {city}, {country}): ");
+                            string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
+                            Location locationFoundToUpdate = new Location
+                            {
+                                City = locationToUpdate[0].ToUpper(),
+                                Country = locationToUpdate[1].ToUpper()
+                            };
+                            foreach (var l in locationController.GetAll())
+                            {
+                                if (l.City.ToUpper() != locationFoundToUpdate.City.ToUpper() || l.Country.ToUpper() != locationFoundToUpdate.Country.ToUpper())
+                                {
+                                    locationController.Add(locationFoundToUpdate);
+                                }
+                            }
+                            foundAnimalToUpdate.Location = locationFoundToUpdate;
+
+                            Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
+                            string dateUpdateFound = Console.ReadLine();
+                            DateOnly dateFoundToUpdate;
+                            if (!DateOnly.TryParseExact(dateUpdateFound, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateFoundToUpdate))
+                            {
+                                throw new FormatException("Invalid date format. Expected format: dd/MM/yyyy.");
+                            }
+                            foundAnimalToUpdate.DateFound = dateFoundToUpdate;
+
+                            Console.WriteLine("Choose a species*:");
+                            Console.WriteLine("1. Cat");
+                            Console.WriteLine("2. Dog");
+                            Console.WriteLine("3. Rabbit");
+                            Console.WriteLine("4. Parrot");
+                            Console.WriteLine("5. Hamster");
+                            Console.WriteLine("6. Guinea pig");
+                            Console.WriteLine("7. Other");
+                            int petToUpdateFound = int.Parse(Console.ReadLine());
+                            foundAnimalToUpdate.Species = (PetType)petToUpdateFound;
+
+                            Console.Write("Age (Enter the closest age to the real one in years): ");
+                            string ageToUpdateFound = Console.ReadLine();
+                            if (ageToUpdateFound != "-")
+                            {
+                                foundAnimalToUpdate.Age = int.Parse(ageToUpdateFound);
+                            }
+
+                            Console.Write("Breed: ");
+                            string breedToUpdateFound = Console.ReadLine();
+                            if (breedToUpdateFound != "-")
+                            {
+                                foundAnimalToUpdate.Breed = breedToUpdateFound;
+                            }
+
+                            Console.WriteLine("Description:");
+                            string descriptionToUpdateFound = Console.ReadLine();
+                            if (descriptionToUpdateFound != "-")
+                            {
+                                foundAnimalToUpdate.Description = descriptionToUpdateFound;
+                            }
+
+                            foundAnimalController.Update(foundAnimalToUpdate);
+
+                            Console.WriteLine($"Successfully updated information about found animal with id {idToUpdate}!");
+                        }
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 4:
+                    Console.Write(new string('-', 25));
+                    Console.Write("DELETE A FOUND ANIMAL");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.Write("Enter ID to delete: ");
+                    int idToDelete = int.Parse(Console.ReadLine());
+
+                    FoundAnimal foundAnimalToDelete = foundAnimalController.Get(idToDelete);
+                    if (foundAnimalToDelete != null)
+                    {
+                        Console.WriteLine("Data for pet:");
+                        foundAnimalToDelete.ToString();
+                        Console.Write("Do you wish to proceed and delete the information about the pet? (Y/N): ");
+                        string input = Console.ReadLine().ToLower();
+
+                        if (input == "y")
+                        {
+                            foundAnimalController.Delete(idToDelete);
+                            Console.WriteLine($"Successfully deleted found animal with id {idToDelete}!");
+                        }
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 5:
+                    Console.Write(new string('-', 25));
+                    Console.Write("FOUND ANIMALS");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    foreach (var animal in foundAnimalController.GetAll())
+                    {
+                        animal.ToString();
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 6:
+                    Console.Write(new string('-', 25));
+                    Console.Write("FOUND ANIMALS BY LOCATION");
+                    Console.Write(new string('-', 25));
+                    Console.WriteLine();
+
+                    Console.WriteLine("Choose a location: ");
+                    foreach (var l in locationController.GetAll())
+                    {
+                        l.ToString();
+                    }
+
+                    int location = int.Parse(Console.ReadLine());
+                    Location locationToFetch = locationController.Get(location);
+                    foreach (var animal in foundAnimalController.GetAll())
+                    {
+                        if (animal.Location == locationToFetch)
+                        {
+                            animal.ToString();
+                        }
+                    }
+
+                    Console.WriteLine();
+
+                    break;
+
+                case 7:
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
             }
         }
     }

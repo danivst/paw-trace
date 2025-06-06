@@ -13,14 +13,12 @@ namespace DataLayer.Models
         public int Id { get; set; }
 
         [Required]
-        public string Gender { get; set; }
+        public Gender Gender { get; set; }
 
-        [Required]
         public string Color { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Location { get; set; }
+        public Location Location { get; set; }
 
         [Required]
         public DateOnly DateFound { get; set; }
@@ -32,17 +30,30 @@ namespace DataLayer.Models
         public StatusType Status { get; set; }
 
         [StringLength(50)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Range(1, 99)]
         public int Age { get; set; }
 
         [StringLength(50)]
-        public string Breed { get; set; }
+        public string? Breed { get; set; }
 
         [Range(0, 200)]
-        public int Description { get; set; }
+        public string? Description { get; set; }
 
-        public byte[] Image { get; set; }
+        public byte[]? Image { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}. Name: {Name}\n" +
+                   $"Age: {Age}\n" +
+                   $"Gender: {Gender}\n" +
+                   $"Color: {Color}\n" +
+                   $"Location: {Location}\n" +
+                   $"Date found: {DateFound}\n" +
+                   $"Species: {Species}\n" +
+                   $"Breed: {Breed}\n" +
+                   $"Description: {Description}";
+        }
     }
 }

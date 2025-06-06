@@ -8,13 +8,20 @@ namespace DataLayer
 {
     public enum PetType
     {
-        Cat,
-        Dog,
-        Rabbit,
-        Parrot,
-        Hamster,
-        GuineaPig,
-        Other
+        Cat = 1,
+        Dog = 2,
+        Rabbit = 3,
+        Parrot = 4,
+        Hamster = 5,
+        GuineaPig = 6,
+        Other = 7
+    }
+
+    public enum Gender
+    {
+        Female = 1,
+        Male = 2,
+        Castrated = 3
     }
 
     public enum StatusType
