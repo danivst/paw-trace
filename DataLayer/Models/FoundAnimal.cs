@@ -45,15 +45,16 @@ namespace DataLayer.Models
 
         public override string ToString()
         {
-            return $"{Id}. Name: {Name}\n" +
-                   $"Age: {Age}\n" +
+            return $"{Id}.\n"+
+                   $"Name: {(string.IsNullOrWhiteSpace(Name) ? "-" : Name)}\n" +
+                   $"Age: {(string.IsNullOrWhiteSpace(Age.ToString()) ? "-" : Age)}\n" +
                    $"Gender: {Gender}\n" +
                    $"Color: {Color}\n" +
                    $"Location: {Location}\n" +
                    $"Date found: {DateFound}\n" +
                    $"Species: {Species}\n" +
-                   $"Breed: {Breed}\n" +
-                   $"Description: {Description}";
+                   $"Breed: {(string.IsNullOrWhiteSpace(Breed) ? "-" : Breed)}\n" +
+                   $"Description: {(string.IsNullOrWhiteSpace(Description) ? "-" : Description)}";
         }
     }
 }

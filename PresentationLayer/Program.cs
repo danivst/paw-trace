@@ -1,9 +1,10 @@
-﻿namespace PresentationLayer;
-
-public static class Program
+﻿namespace PresentationLayer
 {
-    static void Main()
+    public static class Program
     {
-        Display display = new Display();
+        static void Main()
+        {
+            Display display = new Display();
+        }
     }
 }
