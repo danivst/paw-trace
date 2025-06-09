@@ -47,7 +47,7 @@ namespace DataLayer.Models
         {
             return $"{Id}.\n"+
                    $"Name: {(string.IsNullOrWhiteSpace(Name) ? "-" : Name)}\n" +
-                   $"Age: {(string.IsNullOrWhiteSpace(Age.ToString()) ? "-" : Age)}\n" +
+                   $"Age: {(Age == 0 ? "-" : Age.ToString())}\n" +
                    $"Gender: {Gender}\n" +
                    $"Color: {Color}\n" +
                    $"Location: {Location}\n" +

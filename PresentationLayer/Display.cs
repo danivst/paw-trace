@@ -2,6 +2,7 @@
 using DataLayer;
 using DataLayer.Models;
 using PawTrace;
+using System;
 using System.Globalization;
 using System.Linq;
 
@@ -103,12 +104,6 @@ namespace PresentationLayer
 
                     Console.Write("Location* (Format: {city}, {country}): ");
                     string[] locationAddLost = Console.ReadLine().Split(", ").ToArray();
-                    Location locationLost = new Location
-                    {
-                        City = locationAddLost[0].ToUpper(),
-                        Country = locationAddLost[1].ToUpper()
-                    };
-
 
                     
 
@@ -209,15 +204,9 @@ namespace PresentationLayer
 
                             Console.Write("Location* (Format: {city}, {country}): ");
                             string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
-                            Location locationLostToUpdate = new Location
-                            {
-                                City = locationToUpdate[0].ToUpper(),
-                                Country = locationToUpdate[1].ToUpper()
-                            };
 
-                            // !!!!
-
-                            lostAnimalToUpdate.Location = locationLostToUpdate;
+                            
+                            lostAnimalToUpdate.Location = locationLostNew;
 
                             Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
                             string dateUpdateLost = Console.ReadLine();
@@ -347,6 +336,7 @@ namespace PresentationLayer
 
                     Console.WriteLine("Choose a location: ");
                     int count = 1;
+                    Console.WriteLine(locationController.GetAll().Count);
                     foreach (var l in locationController.GetAll())
                     {
                         Console.WriteLine($"{count}. {l.ToString()}");
@@ -430,13 +420,8 @@ namespace PresentationLayer
 
                     Console.Write("Location* (Format: {city}, {country}): ");
                     string[] locationAddFound = Console.ReadLine().Split(", ").ToArray();
-                    Location locationFound = new Location
-                    {
-                        City = locationAddFound[0].ToUpper(),
-                        Country = locationAddFound[1].ToUpper()
-                    };
 
-                    // !!!!
+                    
 
                     Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                     string dateAddFound = Console.ReadLine();
@@ -528,11 +513,6 @@ namespace PresentationLayer
 
                         Console.Write("Location* (Format: {city}, {country}): ");
                         string[] locationMatches = Console.ReadLine().Split(", ").ToArray();
-                        Location locationFoundMatches = new Location
-                        {
-                            City = locationMatches[0].ToUpper(),
-                            Country = locationMatches[1].ToUpper()
-                        };
 
                         Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                         string date = Console.ReadLine();
@@ -588,7 +568,7 @@ namespace PresentationLayer
 
                         foreach (var animal in lostAnimalController.GetAll())
                         {
-                            if (animal.Gender == (Gender)gender && animal.Color == color && animal.Species == (PetType)pet && animal.Location == locationFoundMatches && (animal.DateLost <= dateFoundMatches))
+                            if (animal.Gender == (Gender)gender && animal.Color == color && animal.Species == (PetType)pet && animal.Location.City.ToUpper() == locationMatches[0] && animal.Location.Country.ToUpper() == locationMatches[1] && (animal.DateLost <= dateFoundMatches))
                             {
                                 if ((hasName == true && animal.Name == name) || (hasAge == true && animal.Age == int.Parse(age)) || (hasBreed == true && animal.Breed == breed))
                                 {
@@ -605,17 +585,17 @@ namespace PresentationLayer
 
                             if (input == "y")
                             {
+                                
+
                                 FoundAnimal foundAnimalNew = new FoundAnimal
                                 {
                                     Gender = (Gender)gender,
                                     Color = color,
-                                    Location = locationFoundMatches,
+                                    Location = locationFound,
                                     DateFound = dateFoundMatches,
                                     Species = (PetType)pet,
                                     Status = StatusType.Found
                                 };
-
-                                // !!!
 
                                 if (hasAge)
                                 {
@@ -752,20 +732,10 @@ namespace PresentationLayer
 
                             Console.Write("Location* (Format: {city}, {country}): ");
                             string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
-                            Location locationFoundToUpdate = new Location
-                            {
-                                City = locationToUpdate[0].ToUpper(),
-                                Country = locationToUpdate[1].ToUpper()
-                            };
-                            bool locationExistsUpdate = locationController.GetAll()
-                                          .Any(l => l.City.ToUpper() == locationFoundToUpdate.City.ToUpper() &&
-                                                    l.Country.ToUpper() == locationFoundToUpdate.Country.ToUpper());
 
-                            if (!locationExistsUpdate)
-                            {
-                                locationController.Add(locationFoundToUpdate);
-                            }
-                            foundAnimalToUpdate.Location = locationFoundToUpdate;
+                            
+
+                            foundAnimalToUpdate.Location = locationFoundNew;
 
                             Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                             string dateUpdateFound = Console.ReadLine();

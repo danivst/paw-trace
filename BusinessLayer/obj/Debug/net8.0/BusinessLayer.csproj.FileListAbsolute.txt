@@ -16,3 +16,21 @@ F:\proekt\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 F:\proekt\BusinessLayer\obj\Debug\net8.0\BusinessLayer.genruntimeconfig.cache
 F:\proekt\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\BusinessLayer.deps.json
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\BusinessLayer.runtimeconfig.json
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\BusinessLayer.dll
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\BusinessLayer.pdb
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\DataLayer.dll
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\bin\Debug\net8.0\DataLayer.pdb
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\Business.EA331CBA.Up2Date
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\BusinessLayer.genruntimeconfig.cache
+C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll

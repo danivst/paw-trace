@@ -20,6 +20,12 @@ namespace DataLayer.Models
         [StringLength(20)]
         public string Country { get; set; }
 
+        public Location(string city, string country)
+        {
+            City = city;
+            Country = country;
+        }
+
         public override string ToString()
         {
             return $"{City}, {Country}";

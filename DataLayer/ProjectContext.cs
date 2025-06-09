@@ -31,7 +31,8 @@ namespace DataLayer
         {
             modelBuilder.Entity<FoundAnimal>();
             modelBuilder.Entity<LostAnimal>();
-            modelBuilder.Entity<Location>();
+            modelBuilder.Entity<Location>().HasMany<FoundAnimal>();
+            modelBuilder.Entity<Location>().HasMany<LostAnimal>();
         }
     }
 }

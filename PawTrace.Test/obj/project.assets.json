@@ -982,23 +982,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dani\\.nuget\\packages\\": {},
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\proekt\\PawTrace.Test\\PawTrace.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace.Test\\PawTrace.Test.csproj",
       "projectName": "PawTrace.Test",
-      "projectPath": "F:\\proekt\\PawTrace.Test\\PawTrace.Test.csproj",
-      "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
-      "outputPath": "F:\\proekt\\PawTrace.Test\\obj\\",
+      "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace.Test\\PawTrace.Test.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1025,7 +1025,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -1068,7 +1069,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
