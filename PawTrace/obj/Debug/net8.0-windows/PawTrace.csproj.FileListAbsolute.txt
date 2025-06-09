@@ -292,3 +292,4 @@ C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PawTrace\obj\Debug\net8.0-
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PawTrace\obj\Debug\net8.0-windows\PawTrace.pdb
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PawTrace\obj\Debug\net8.0-windows\PawTrace.genruntimeconfig.cache
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PawTrace\obj\Debug\net8.0-windows\ref\PawTrace.dll
+F:\proekt\PawTrace\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.InMemory.dll

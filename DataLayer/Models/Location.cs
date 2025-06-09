@@ -28,7 +28,7 @@ namespace DataLayer.Models
 
         public override string ToString()
         {
-            return $"{City}, {Country}";
+            return $"{Id}. {City}, {Country}";
         }
     }
 }

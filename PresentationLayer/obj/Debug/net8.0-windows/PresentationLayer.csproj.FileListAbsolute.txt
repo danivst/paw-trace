@@ -298,3 +298,4 @@ C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PresentationLayer\obj\Debu
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.pdb
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\PresentationLayer\obj\Debug\net8.0-windows\ref\PresentationLayer.dll
+F:\proekt\PresentationLayer\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.InMemory.dll

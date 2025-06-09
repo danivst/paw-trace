@@ -21,7 +21,7 @@ namespace DataLayer.Models
         public string Color { get; set; }
 
         [Required]
-        public Location Location { get; set; }
+        public int LocationId { get; set; }
 
         [Required]
         public DateOnly DateLost { get; set; }
@@ -50,7 +50,7 @@ namespace DataLayer.Models
                    $"Age: {(Age == 0 ? "-" : Age.ToString())}\n" +
                    $"Gender: {Gender}\n" +
                    $"Color: {Color}\n" +
-                   $"Location: {Location}\n" +
+                   $"Location: {LocationId}\n" +
                    $"Date lost: {DateLost}\n" +
                    $"Species: {Species}\n" +
                    $"Breed: {(string.IsNullOrWhiteSpace(Breed) ? "-" : Breed)}\n" +

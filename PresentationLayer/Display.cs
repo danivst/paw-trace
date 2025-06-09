@@ -103,9 +103,7 @@ namespace PresentationLayer
                     string colorAddLost = Console.ReadLine();
 
                     Console.Write("Location* (Format: {city}, {country}): ");
-                    string[] locationAddLost = Console.ReadLine().Split(", ").ToArray();
-
-                    
+                    string[] locationLost = Console.ReadLine().Split(", ").ToArray();
 
                     Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
                     string dateAddLost = Console.ReadLine();
@@ -125,12 +123,14 @@ namespace PresentationLayer
                     Console.WriteLine("7. Other");
                     int petAddLost = int.Parse(Console.ReadLine());
 
+                    var locationToAdd = locationController.GetOrAdd(locationLost[0], locationLost[1]);
+
                     LostAnimal lostAnimal = new LostAnimal
                     {
                         Name = nameAddLost,
                         Gender = (Gender)genderAddLost,
                         Color = colorAddLost,
-                        Location = locationLost,
+                        LocationId = locationToAdd.Id,
                         DateLost = dateLost,
                         Species = (PetType)petAddLost,
                         Status = StatusType.Lost
@@ -183,7 +183,7 @@ namespace PresentationLayer
 
                         if (input == "y")
                         {
-                            Location locationToDelete = lostAnimalToUpdate.Location;
+                            int locationToDelete = lostAnimalToUpdate.LocationId;
 
                             Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
                             Console.WriteLine();
@@ -205,8 +205,8 @@ namespace PresentationLayer
                             Console.Write("Location* (Format: {city}, {country}): ");
                             string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
 
-                            
-                            lostAnimalToUpdate.Location = locationLostNew;
+                            var locationToUpdateNew = locationController.GetOrAdd(locationToUpdate[0], locationToUpdate[1]);
+                            lostAnimalToUpdate.LocationId = locationToUpdateNew.Id;
 
                             Console.Write("Date lost* (Format: {dd/MM/yyyy}): ");
                             string dateUpdateLost = Console.ReadLine();
@@ -251,13 +251,10 @@ namespace PresentationLayer
 
                             lostAnimalController.Update(lostAnimalToUpdate);
 
-                            bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
-
+                            bool locationIsUsed = lostAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
                             if (!locationIsUsed)
                             {
-                                locationController.Delete(locationToDelete.Id);
+                                locationController.Delete(locationToDelete);
                             }
 
                             Console.WriteLine($"Successfully updated information about lost animal with id {idToUpdate}!");
@@ -288,16 +285,13 @@ namespace PresentationLayer
 
                         if (input == "y")
                         {
-                            Location locationToDelete = lostAnimalToDelete.Location;
+                            int locationToDelete = lostAnimalToDelete.LocationId;
                             lostAnimalController.Delete(idToDelete);
 
-                            bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
-
+                            bool locationIsUsed = lostAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
                             if (!locationIsUsed)
                             {
-                                locationController.Delete(locationToDelete.Id);
+                                locationController.Delete(locationToDelete);
                             }
 
                             Console.WriteLine($"Successfully deleted lost animal with id {idToDelete}!");
@@ -335,35 +329,42 @@ namespace PresentationLayer
                     Console.WriteLine();
 
                     Console.WriteLine("Choose a location: ");
-                    int count = 1;
-                    Console.WriteLine(locationController.GetAll().Count);
-                    foreach (var l in locationController.GetAll())
-                    {
-                        Console.WriteLine($"{count}. {l.ToString()}");
-                    }
-                    int location = int.Parse(Console.ReadLine());
-                    Location locationToFetch = locationController.Get(location);
 
-                    Console.Write(new string('-', 25));
-                    Console.Write("RESULTS");
-                    Console.Write(new string('-', 25));
-                    Console.WriteLine();
-
-                    count = 0;
-                    foreach (var animal in lostAnimalController.GetAll())
+                    if (locationController.GetAll().Count == 0)
                     {
-                        if (animal.Location == locationToFetch)
+                        Console.WriteLine("No locations found!");
+                    }    
+                    else
+                    {
+                        int count = 1;
+                        foreach (var l in locationController.GetAll())
                         {
-                            Console.WriteLine(animal.ToString());
-                            count++;
+                            Console.WriteLine($"{l.ToString()}");
+                        }
+                        int location = int.Parse(Console.ReadLine());
+                        Location locationToFetch = locationController.Get(location);
+
+                        Console.Write(new string('-', 25));
+                        Console.Write("RESULTS");
+                        Console.Write(new string('-', 25));
+                        Console.WriteLine();
+
+                        count = 0;
+                        foreach (var animal in lostAnimalController.GetAll())
+                        {
+                            if (animal.LocationId == locationToFetch.Id)
+                            {
+                                Console.WriteLine(animal.ToString());
+                                count++;
+                            }
+                        }
+
+                        if (count == 0)
+                        {
+                            Console.WriteLine("No lost animals!");
                         }
                     }
-
-                    if (count == 0)
-                    {
-                        Console.WriteLine("No lost animals!");
-                    }
-
+                    
                     Console.WriteLine();
 
                     break;
@@ -419,9 +420,7 @@ namespace PresentationLayer
                     string colorAddFound = Console.ReadLine();
 
                     Console.Write("Location* (Format: {city}, {country}): ");
-                    string[] locationAddFound = Console.ReadLine().Split(", ").ToArray();
-
-                    
+                    string[] locationFound = Console.ReadLine().Split(", ").ToArray();
 
                     Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                     string dateAddFound = Console.ReadLine();
@@ -441,11 +440,13 @@ namespace PresentationLayer
                     Console.WriteLine("7. Other");
                     int petAddFound = int.Parse(Console.ReadLine());
 
+                    var locationToAdd = locationController.GetOrAdd(locationFound[0], locationFound[1]);
+
                     FoundAnimal foundAnimal = new FoundAnimal
                     {
                         Gender = (Gender)genderAddFound,
                         Color = colorAddFound,
-                        Location = locationFound,
+                        LocationId = locationToAdd.Id,
                         DateFound = dateFound,
                         Species = (PetType)petAddFound,
                         Status = StatusType.Found
@@ -479,7 +480,7 @@ namespace PresentationLayer
 
                     foundAnimalController.Add(foundAnimal);
 
-                    Console.WriteLine("Successfully added a lost animal!");
+                    Console.WriteLine("Successfully added a found animal!");
                     Console.WriteLine();
 
                     break;
@@ -513,6 +514,8 @@ namespace PresentationLayer
 
                         Console.Write("Location* (Format: {city}, {country}): ");
                         string[] locationMatches = Console.ReadLine().Split(", ").ToArray();
+
+                        var locationMatchesNew = locationController.GetOrAdd(locationMatches[0], locationMatches[1]);
 
                         Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                         string date = Console.ReadLine();
@@ -568,7 +571,7 @@ namespace PresentationLayer
 
                         foreach (var animal in lostAnimalController.GetAll())
                         {
-                            if (animal.Gender == (Gender)gender && animal.Color == color && animal.Species == (PetType)pet && animal.Location.City.ToUpper() == locationMatches[0] && animal.Location.Country.ToUpper() == locationMatches[1] && (animal.DateLost <= dateFoundMatches))
+                            if (animal.Gender == (Gender)gender && animal.Color == color && animal.Species == (PetType)pet && animal.LocationId == locationMatchesNew.Id && (animal.DateLost <= dateFoundMatches))
                             {
                                 if ((hasName == true && animal.Name == name) || (hasAge == true && animal.Age == int.Parse(age)) || (hasBreed == true && animal.Breed == breed))
                                 {
@@ -585,13 +588,11 @@ namespace PresentationLayer
 
                             if (input == "y")
                             {
-                                
-
                                 FoundAnimal foundAnimalNew = new FoundAnimal
                                 {
                                     Gender = (Gender)gender,
                                     Color = color,
-                                    Location = locationFound,
+                                    LocationId = locationMatchesNew.Id,
                                     DateFound = dateFoundMatches,
                                     Species = (PetType)pet,
                                     Status = StatusType.Found
@@ -613,6 +614,8 @@ namespace PresentationLayer
                                 }
 
                                 foundAnimalController.Add(foundAnimalNew);
+
+                                Console.WriteLine("Successfully added a lost animal!");
                             }
                         }
                         else if (matches.Count == 1)
@@ -623,18 +626,15 @@ namespace PresentationLayer
                             if (input == "y")
                             {
                                 LostAnimal animal = matches[0];
-                                Location locationToDelete = animal.Location;
-                                
+                                int locationToDelete = animal.LocationId;
+
                                 animal.Status = StatusType.Found;
-                                foundAnimalController.Delete(animal.Id);
+                                lostAnimalController.Delete(animal.Id);
 
-                                bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
-
+                                bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
                                 if (!locationIsUsed)
                                 {
-                                    locationController.Delete(locationToDelete.Id);
+                                    locationController.Delete(locationToDelete);
                                 }
 
                                 Console.WriteLine($"Successfully marked as found and deleted found animal with id {animal.Id}!");
@@ -658,17 +658,15 @@ namespace PresentationLayer
                                     {
                                         found = true;
 
-                                        Location locationToDelete = animal.Location;
+                                        int locationToDelete = animal.LocationId;
+
                                         animal.Status = StatusType.Found;
                                         foundAnimalController.Delete(animal.Id);
 
-                                        bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
-
+                                        bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
                                         if (!locationIsUsed)
                                         {
-                                            locationController.Delete(locationToDelete.Id);
+                                            locationController.Delete(locationToDelete);
                                         }
 
                                         Console.WriteLine($"Successfully marked as found and deleted found animal with id {animal.Id}!");
@@ -707,7 +705,7 @@ namespace PresentationLayer
 
                         if (input == "y")
                         {
-                            Location locationToDelete = foundAnimalToUpdate.Location;
+                            int locationToDelete = foundAnimalToUpdate.LocationId;
 
                             Console.WriteLine("If you want to leave a field empty, type '-' (If a field is marked with '*', you cannot leave it empty as it is obligatory data)");
                             Console.WriteLine();
@@ -733,9 +731,8 @@ namespace PresentationLayer
                             Console.Write("Location* (Format: {city}, {country}): ");
                             string[] locationToUpdate = Console.ReadLine().Split(", ").ToArray();
 
-                            
-
-                            foundAnimalToUpdate.Location = locationFoundNew;
+                            var locationToUpdateNew = locationController.GetOrAdd(locationToUpdate[0], locationToUpdate[1]);
+                            foundAnimalToUpdate.LocationId = locationToUpdateNew.Id;
 
                             Console.Write("Date found* (Format: {dd/MM/yyyy}): ");
                             string dateUpdateFound = Console.ReadLine();
@@ -780,13 +777,11 @@ namespace PresentationLayer
 
                             foundAnimalController.Update(foundAnimalToUpdate);
 
-                            bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
+                            bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
 
                             if (!locationIsUsed)
                             {
-                                locationController.Delete(locationToDelete.Id);
+                                locationController.Delete(locationToDelete);
                             }
 
                             Console.WriteLine($"Successfully updated information about found animal with id {idToUpdate}!");
@@ -816,15 +811,13 @@ namespace PresentationLayer
 
                         if (input == "y")
                         {
-                            Location locationToDelete = foundAnimalToDelete.Location;
+                            int locationToDelete = foundAnimalToDelete.LocationId;
                             foundAnimalController.Delete(idToDelete);
-                            bool locationIsUsed = foundAnimalController.GetAll()
-                                                  .Any(a => a.Location.City.Equals(locationToDelete.City.ToUpper()) &&
-                                                            a.Location.Country.Equals(locationToDelete.Country.ToUpper()));
 
+                            bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
                             if (!locationIsUsed)
                             {
-                                locationController.Delete(locationToDelete.Id);
+                                locationController.Delete(locationToDelete);
                             }
 
                             Console.WriteLine($"Successfully deleted found animal with id {idToDelete}!");
@@ -862,34 +855,41 @@ namespace PresentationLayer
                     Console.WriteLine();
 
                     Console.WriteLine("Choose a location: ");
-                    int count = 1;
-                    foreach (var l in locationController.GetAll())
+                    if (locationController.GetAll().Count == 0)
                     {
-                        Console.WriteLine($"{count}. {l.ToString()}");
+                        Console.WriteLine("No locations found!");
                     }
-                    int location = int.Parse(Console.ReadLine());
-                    Location locationToFetch = locationController.Get(location);
-
-                    Console.Write(new string('-', 25));
-                    Console.Write("RESULTS");
-                    Console.Write(new string('-', 25));
-                    Console.WriteLine();
-
-                    count = 0;
-                    foreach (var animal in foundAnimalController.GetAll())
+                    else
                     {
-                        if (animal.Location == locationToFetch)
+                        int count = 1;
+                        foreach (var l in locationController.GetAll())
                         {
-                            Console.WriteLine(animal.ToString());
-                            count += 1;
+                            Console.WriteLine($"{l.ToString()}");
+                        }
+                        int location = int.Parse(Console.ReadLine());
+                        Location locationToFetch = locationController.Get(location);
+
+                        Console.Write(new string('-', 25));
+                        Console.Write("RESULTS");
+                        Console.Write(new string('-', 25));
+                        Console.WriteLine();
+
+                        count = 0;
+                        foreach (var animal in foundAnimalController.GetAll())
+                        {
+                            if (animal.LocationId == locationToFetch.Id)
+                            {
+                                Console.WriteLine(animal.ToString());
+                                count += 1;
+                            }
+                        }
+
+                        if (count == 0)
+                        {
+                            Console.WriteLine("No found animals!");
                         }
                     }
-
-                    if (count == 0)
-                    {
-                        Console.WriteLine("No found animals!");
-                    }
-
+                    
                     Console.WriteLine();
 
                     break;

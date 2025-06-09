@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace\\PawTrace.csproj": {}
+    "F:\\proekt\\PawTrace\\PawTrace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\BusinessLayer.csproj": {
+    "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\obj\\",
+        "projectPath": "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
+        "outputPath": "F:\\proekt\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj"
+              "F:\\proekt\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "F:\\proekt\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -48,14 +48,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.5, )"
             },
@@ -86,24 +89,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj": {
+    "F:\\proekt\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "F:\\proekt\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\obj\\",
+        "projectPath": "F:\\proekt\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
+        "outputPath": "F:\\proekt\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -130,14 +133,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.5, )"
             },
@@ -168,24 +174,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace\\PawTrace.csproj": {
+    "F:\\proekt\\PawTrace\\PawTrace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace\\PawTrace.csproj",
+        "projectUniqueName": "F:\\proekt\\PawTrace\\PawTrace.csproj",
         "projectName": "PawTrace",
-        "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace\\PawTrace.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\PawTrace\\obj\\",
+        "projectPath": "F:\\proekt\\PawTrace\\PawTrace.csproj",
+        "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
+        "outputPath": "F:\\proekt\\PawTrace\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -201,11 +207,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\BusinessLayer\\BusinessLayer.csproj"
+              "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\Downloads\\11 klas\\rs\\proekt\\paw-trace\\DataLayer\\DataLayer.csproj"
+              "F:\\proekt\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "F:\\proekt\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -219,14 +225,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.5, )"
             },
@@ -260,7 +269,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

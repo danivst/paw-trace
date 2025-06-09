@@ -1,11 +1,22 @@
 ﻿using DataLayer;
 using DataLayer.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer
 {
     public class LostAnimalController : IController<LostAnimal>
     {
-        private ProjectContext context = new ProjectContext();
+        private ProjectContext context;
+
+        public LostAnimalController(ProjectContext context)
+        {
+            this.context = context;
+        }
+
+        public LostAnimalController()
+        {
+            context = new ProjectContext();
+        }
 
         public List<LostAnimal> GetAll()
         {
@@ -14,13 +25,17 @@ namespace BusinessLayer
 
         public LostAnimal Get(int id)
         {
-            return context.LostAnimals.Find(id);
+            return context.LostAnimals.FirstOrDefault(l => l.Id == id);
         }
 
         public void Add(LostAnimal lostAnimal)
         {
-            context.LostAnimals.Add(lostAnimal);
-            context.SaveChanges();
+            var oldLostAnimal = Get(lostAnimal.Id);
+            if (oldLostAnimal == null)
+            {
+                context.LostAnimals.Add(lostAnimal);
+                context.SaveChanges();
+            } 
         }
 
         public void Update(LostAnimal newLostAnimal)

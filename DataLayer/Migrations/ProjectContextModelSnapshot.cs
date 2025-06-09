@@ -30,7 +30,7 @@ namespace DataLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
+                    b.Property<int?>("Age")
                         .HasColumnType("int");
 
                     b.Property<string>("Breed")
@@ -56,9 +56,6 @@ namespace DataLayer.Migrations
                     b.Property<int>("LocationId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("LocationId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -72,8 +69,6 @@ namespace DataLayer.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("LocationId");
-
-                    b.HasIndex("LocationId1");
 
                     b.ToTable("FoundAnimals");
                 });
@@ -135,9 +130,6 @@ namespace DataLayer.Migrations
                     b.Property<int>("LocationId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("LocationId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -153,39 +145,25 @@ namespace DataLayer.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.HasIndex("LocationId1");
-
                     b.ToTable("LostAnimals");
                 });
 
             modelBuilder.Entity("DataLayer.Models.FoundAnimal", b =>
                 {
-                    b.HasOne("DataLayer.Models.Location", "Location")
-                        .WithMany()
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DataLayer.Models.Location", null)
                         .WithMany()
-                        .HasForeignKey("LocationId1");
-
-                    b.Navigation("Location");
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("DataLayer.Models.LostAnimal", b =>
                 {
-                    b.HasOne("DataLayer.Models.Location", "Location")
-                        .WithMany()
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DataLayer.Models.Location", null)
                         .WithMany()
-                        .HasForeignKey("LocationId1");
-
-                    b.Navigation("Location");
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

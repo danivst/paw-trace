@@ -1,11 +1,22 @@
 ﻿using DataLayer;
 using DataLayer.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer
 {
     public class FoundAnimalController : IController<FoundAnimal>
     {
-        private ProjectContext context = new ProjectContext();
+        private ProjectContext context;
+
+        public FoundAnimalController(ProjectContext context)
+        {
+            this.context = context;
+        }
+
+        public FoundAnimalController()
+        {
+            context = new ProjectContext();
+        }
 
         public List<FoundAnimal> GetAll()
         {
@@ -14,13 +25,17 @@ namespace BusinessLayer
 
         public FoundAnimal Get(int id)
         {
-            return context.FoundAnimals.Find(id);
+            return context.FoundAnimals.FirstOrDefault(l => l.Id == id);
         }
 
         public void Add(FoundAnimal foundAnimal)
         {
-            context.FoundAnimals.Add(foundAnimal);
-            context.SaveChanges();
+            var oldFoundAnimal = Get(foundAnimal.Id);
+            if (oldFoundAnimal == null)
+            {
+                context.FoundAnimals.Add(foundAnimal);
+                context.SaveChanges();
+            }
         }
 
         public void Update(FoundAnimal newFoundAnimal)
