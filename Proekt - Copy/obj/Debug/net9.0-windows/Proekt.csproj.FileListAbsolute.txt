@@ -1,0 +1,17 @@
+D:\Proekt\bin\Debug\net9.0-windows\Proekt.exe
+D:\Proekt\bin\Debug\net9.0-windows\Proekt.deps.json
+D:\Proekt\bin\Debug\net9.0-windows\Proekt.runtimeconfig.json
+D:\Proekt\bin\Debug\net9.0-windows\Proekt.dll
+D:\Proekt\bin\Debug\net9.0-windows\Proekt.pdb
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.Form1.resources
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.csproj.GenerateResource.cache
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.AssemblyInfoInputs.cache
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.AssemblyInfo.cs
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.csproj.CoreCompileInputs.cache
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.dll
+D:\Proekt\obj\Debug\net9.0-windows\refint\Proekt.dll
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.pdb
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.genruntimeconfig.cache
+D:\Proekt\obj\Debug\net9.0-windows\ref\Proekt.dll
+D:\Proekt\obj\Debug\net9.0-windows\Proekt.Properties.Resources.resources
