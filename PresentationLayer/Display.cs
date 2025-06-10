@@ -39,8 +39,15 @@ namespace PresentationLayer
                 {
                     case 1:
                         Console.WriteLine("Opening Windows Forms App...");
-                        Task.Run(() => Application.Run(new Form1()));
-                        Console.WriteLine("Windows Forms App successfully opened!");
+						var thread = new System.Threading.Thread(() =>
+						{
+							Application.EnableVisualStyles();
+							Application.SetCompatibleTextRenderingDefault(false);
+							Application.Run(new Form1());
+						});
+						thread.SetApartmentState(System.Threading.ApartmentState.STA);
+						thread.Start();
+						Console.WriteLine("Windows Forms App successfully opened!");
                         Console.WriteLine();
                         break;
 

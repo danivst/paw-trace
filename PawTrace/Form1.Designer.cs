@@ -438,6 +438,7 @@
 			dataGridViewLostAll.RowHeadersWidth = 51;
 			dataGridViewLostAll.Size = new Size(728, 477);
 			dataGridViewLostAll.TabIndex = 1;
+			dataGridViewLostAll.CellContentClick += dataGridViewLostAll_CellContentClick;
 			// 
 			// lblLostAllTitle
 			// 
@@ -462,6 +463,7 @@
 			buttonLostSearch.TabIndex = 37;
 			buttonLostSearch.Text = "Search";
 			buttonLostSearch.UseVisualStyleBackColor = false;
+			buttonLostSearch.Click += buttonLostSearch_Click;
 			// 
 			// boxLostAllSpecies
 			// 

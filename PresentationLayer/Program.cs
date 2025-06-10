@@ -1,8 +1,12 @@
-﻿namespace PresentationLayer
+﻿using System.Windows.Forms;
+using System.Threading;
+
+namespace PresentationLayer
 {
     public static class Program
     {
-        static void Main()
+		[STAThread]
+		static void Main()
         {
             Display display = new Display();
         }
