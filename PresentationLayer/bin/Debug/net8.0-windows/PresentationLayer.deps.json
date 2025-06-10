@@ -974,7 +974,7 @@
         },
         "runtime": {
           "BusinessLayer.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -987,7 +987,7 @@
         },
         "runtime": {
           "DataLayer.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1002,7 +1002,7 @@
         },
         "runtime": {
           "PawTrace.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

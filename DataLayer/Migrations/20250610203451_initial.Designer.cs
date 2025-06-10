@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20250609203514_initial")]
+    [Migration("20250610203451_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -64,9 +64,6 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Species")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -139,9 +136,6 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Species")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

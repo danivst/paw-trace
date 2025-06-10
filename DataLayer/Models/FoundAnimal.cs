@@ -26,9 +26,6 @@ namespace DataLayer.Models
         [Required]
         public PetType Species { get; set; }
 
-        [Required]
-        public StatusType Status { get; set; }
-
         [StringLength(50)]
         public string? Name { get; set; }
 

@@ -23,10 +23,4 @@ namespace DataLayer
         Male = 2,
         Castrated = 3
     }
-
-    public enum StatusType
-    {
-        Lost,
-        Found
-    }
 }

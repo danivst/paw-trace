@@ -33,7 +33,6 @@ namespace PawTrace.Test
                 LocationId = location.Id,
                 DateLost = new DateOnly(2021, 12, 12),
                 Species = PetType.Cat,
-                Status = StatusType.Lost,
                 Age = 1,
                 Breed = "-",
                 Description = "-"
@@ -48,7 +47,6 @@ namespace PawTrace.Test
                 LocationId = location.Id,
                 DateFound = new DateOnly(2022, 12, 12),
                 Species = PetType.Dog,
-                Status = StatusType.Found,
                 Age = 5,
                 Breed = "-",
                 Description = "-"
@@ -161,7 +159,6 @@ namespace PawTrace.Test
                 LocationId = 1,
                 DateLost = new DateOnly(2024, 12, 11),
                 Species = PetType.Parrot,
-                Status = StatusType.Lost,
                 Age = 4,
                 Breed = "-",
                 Description = "-"
@@ -242,7 +239,6 @@ namespace PawTrace.Test
                 LocationId = 1,
                 DateFound = new DateOnly(2012, 10, 12),
                 Species = PetType.Rabbit,
-                Status = StatusType.Found,
                 Age = 2,
                 Breed = "-",
                 Description = "-"

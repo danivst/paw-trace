@@ -29,9 +29,6 @@ namespace DataLayer.Models
         [Required]
         public PetType Species { get; set; }
 
-        [Required]
-        public StatusType Status { get; set; }
-
         [Range(1, 99)]
         public int Age { get; set; }
 

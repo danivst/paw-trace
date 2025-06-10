@@ -139,8 +139,7 @@ namespace PresentationLayer
                         Color = colorAddLost,
                         LocationId = locationToAdd.Id,
                         DateLost = dateLost,
-                        Species = (PetType)petAddLost,
-                        Status = StatusType.Lost
+                        Species = (PetType)petAddLost
                     };
 
                     Console.Write("Age (Enter the closest age to the real one in years): ");
@@ -455,8 +454,7 @@ namespace PresentationLayer
                         Color = colorAddFound,
                         LocationId = locationToAdd.Id,
                         DateFound = dateFound,
-                        Species = (PetType)petAddFound,
-                        Status = StatusType.Found
+                        Species = (PetType)petAddFound
                     };
 
                     if (nameAddFound != "-")
@@ -601,8 +599,7 @@ namespace PresentationLayer
                                     Color = color,
                                     LocationId = locationMatchesNew.Id,
                                     DateFound = dateFoundMatches,
-                                    Species = (PetType)pet,
-                                    Status = StatusType.Found
+                                    Species = (PetType)pet
                                 };
 
                                 if (hasAge)
@@ -635,7 +632,6 @@ namespace PresentationLayer
                                 LostAnimal animal = matches[0];
                                 int locationToDelete = animal.LocationId;
 
-                                animal.Status = StatusType.Found;
                                 lostAnimalController.Delete(animal.Id);
 
                                 bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
@@ -667,7 +663,6 @@ namespace PresentationLayer
 
                                         int locationToDelete = animal.LocationId;
 
-                                        animal.Status = StatusType.Found;
                                         foundAnimalController.Delete(animal.Id);
 
                                         bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
