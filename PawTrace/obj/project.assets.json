@@ -4799,23 +4799,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dani\\.nuget\\packages\\": {},
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\proekt\\PawTrace\\PawTrace.csproj",
+      "projectUniqueName": "D:\\paw-trace\\PawTrace\\PawTrace.csproj",
       "projectName": "PawTrace",
-      "projectPath": "F:\\proekt\\PawTrace\\PawTrace.csproj",
-      "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
-      "outputPath": "F:\\proekt\\PawTrace\\obj\\",
+      "projectPath": "D:\\paw-trace\\PawTrace\\PawTrace.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "D:\\paw-trace\\PawTrace\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4831,11 +4831,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "F:\\proekt\\BusinessLayer\\BusinessLayer.csproj"
+            "D:\\paw-trace\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "D:\\paw-trace\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "F:\\proekt\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "F:\\proekt\\DataLayer\\DataLayer.csproj"
+            "D:\\paw-trace\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "D:\\paw-trace\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -4849,7 +4849,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -4885,6 +4886,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.200, 9.0.200]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -4893,7 +4900,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

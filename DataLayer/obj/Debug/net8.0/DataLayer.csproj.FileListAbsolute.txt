@@ -28,3 +28,18 @@ C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\DataLayer\obj\Debug\net8.0
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.pdb
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
 C:\Users\Lenovo\Downloads\11 klas\rs\proekt\paw-trace\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll
+D:\paw-trace\DataLayer\bin\Debug\net8.0\DataLayer.deps.json
+D:\paw-trace\DataLayer\bin\Debug\net8.0\DataLayer.runtimeconfig.json
+D:\paw-trace\DataLayer\bin\Debug\net8.0\DataLayer.dll
+D:\paw-trace\DataLayer\bin\Debug\net8.0\DataLayer.pdb
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.csproj.AssemblyReference.cache
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.dll
+D:\paw-trace\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.pdb
+D:\paw-trace\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
+D:\paw-trace\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll

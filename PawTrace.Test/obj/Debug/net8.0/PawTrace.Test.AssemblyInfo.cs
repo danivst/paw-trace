@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PawTrace.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07d8be9ebae2f5f149e79815df2ab197f8159732")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e88d2e3adaee52b942e495e732ce495610944b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PawTrace.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PawTrace.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

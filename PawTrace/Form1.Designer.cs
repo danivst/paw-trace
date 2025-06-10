@@ -20,1025 +20,1139 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox10 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label11 = new Label();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            tabPage3 = new TabPage();
-            label12 = new Label();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            label13 = new Label();
-            linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
-            label29 = new Label();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
-            tabPage4 = new TabPage();
-            label30 = new Label();
-            label31 = new Label();
-            label32 = new Label();
-            label33 = new Label();
-            label34 = new Label();
-            label35 = new Label();
-            label36 = new Label();
-            label37 = new Label();
-            textBox27 = new TextBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
-            textBox30 = new TextBox();
-            textBox31 = new TextBox();
-            textBox32 = new TextBox();
-            textBox33 = new TextBox();
-            button6 = new Button();
-            pictureBox2 = new PictureBox();
-            label10 = new Label();
-            label38 = new Label();
-            textBox9 = new TextBox();
-            textBox34 = new TextBox();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
-            tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Controls.Add(tabPage4);
-            tabControl1.Location = new Point(-4, 1);
-            tabControl1.Margin = new Padding(3, 2, 3, 2);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(979, 521);
-            tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(pictureBox1);
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(label8);
-            tabPage1.Controls.Add(label7);
-            tabPage1.Controls.Add(label6);
-            tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(textBox10);
-            tabPage1.Controls.Add(textBox8);
-            tabPage1.Controls.Add(textBox7);
-            tabPage1.Controls.Add(textBox6);
-            tabPage1.Controls.Add(textBox5);
-            tabPage1.Controls.Add(textBox4);
-            tabPage1.Controls.Add(textBox3);
-            tabPage1.Controls.Add(textBox2);
-            tabPage1.Controls.Add(textBox1);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Margin = new Padding(3, 2, 3, 2);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 2, 3, 2);
-            tabPage1.Size = new Size(971, 493);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Add a lost animal";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(dataGridView4);
-            tabPage2.Controls.Add(button3);
-            tabPage2.Controls.Add(button2);
-            tabPage2.Controls.Add(textBox26);
-            tabPage2.Controls.Add(textBox25);
-            tabPage2.Controls.Add(textBox24);
-            tabPage2.Controls.Add(textBox23);
-            tabPage2.Controls.Add(textBox22);
-            tabPage2.Controls.Add(textBox21);
-            tabPage2.Controls.Add(textBox20);
-            tabPage2.Controls.Add(textBox19);
-            tabPage2.Controls.Add(label21);
-            tabPage2.Controls.Add(label20);
-            tabPage2.Controls.Add(label19);
-            tabPage2.Controls.Add(label18);
-            tabPage2.Controls.Add(label17);
-            tabPage2.Controls.Add(label16);
-            tabPage2.Controls.Add(label15);
-            tabPage2.Controls.Add(label14);
-            tabPage2.Controls.Add(linkLabel1);
-            tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Controls.Add(label12);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Margin = new Padding(3, 2, 3, 2);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(971, 493);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "View lost animals";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(91, 98);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(134, 23);
-            textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(91, 153);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(134, 23);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(91, 208);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(134, 23);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(91, 269);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(134, 23);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(91, 325);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(134, 23);
-            textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(91, 388);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(134, 23);
-            textBox6.TabIndex = 5;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(410, 98);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(134, 23);
-            textBox7.TabIndex = 6;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(410, 153);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(134, 23);
-            textBox8.TabIndex = 7;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(314, 280);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(230, 131);
-            textBox10.TabIndex = 9;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(429, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 10;
-            label1.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(34, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 11;
-            label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(34, 156);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 12;
-            label3.Text = "label3";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(34, 211);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 13;
-            label4.Text = "label4";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(34, 272);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 14;
-            label5.Text = "label5";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(34, 325);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 15;
-            label6.Text = "label6";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(41, 391);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 16;
-            label7.Text = "label7";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(349, 99);
-            label8.Name = "label8";
-            label8.Size = new Size(38, 15);
-            label8.TabIndex = 17;
-            label8.Text = "label8";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(365, 159);
-            label9.Name = "label9";
-            label9.Size = new Size(38, 15);
-            label9.TabIndex = 18;
-            label9.Text = "label9";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(392, 255);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 15);
-            label11.TabIndex = 20;
-            label11.Text = "label11";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(842, 441);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 21;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(772, 175);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 22;
-            pictureBox1.TabStop = false;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(dataGridView3);
-            tabPage3.Controls.Add(button5);
-            tabPage3.Controls.Add(button4);
-            tabPage3.Controls.Add(textBox18);
-            tabPage3.Controls.Add(textBox17);
-            tabPage3.Controls.Add(textBox16);
-            tabPage3.Controls.Add(textBox15);
-            tabPage3.Controls.Add(textBox14);
-            tabPage3.Controls.Add(textBox13);
-            tabPage3.Controls.Add(textBox12);
-            tabPage3.Controls.Add(textBox11);
-            tabPage3.Controls.Add(label29);
-            tabPage3.Controls.Add(label28);
-            tabPage3.Controls.Add(label27);
-            tabPage3.Controls.Add(label26);
-            tabPage3.Controls.Add(label25);
-            tabPage3.Controls.Add(label24);
-            tabPage3.Controls.Add(label23);
-            tabPage3.Controls.Add(label22);
-            tabPage3.Controls.Add(linkLabel2);
-            tabPage3.Controls.Add(label13);
-            tabPage3.Controls.Add(dataGridView2);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(971, 493);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "View found animals";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(426, 27);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 15);
-            label12.TabIndex = 0;
-            label12.Text = "label12";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(593, 55);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(580, 121);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(240, 150);
-            dataGridView2.TabIndex = 0;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(435, 56);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 15);
-            label13.TabIndex = 1;
-            label13.Text = "label13";
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(426, 55);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(60, 15);
-            linkLabel1.TabIndex = 2;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(448, 81);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(60, 15);
-            linkLabel2.TabIndex = 2;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "linkLabel2";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(118, 109);
-            label14.Name = "label14";
-            label14.Size = new Size(44, 15);
-            label14.TabIndex = 3;
-            label14.Text = "label14";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(124, 139);
-            label15.Name = "label15";
-            label15.Size = new Size(44, 15);
-            label15.TabIndex = 4;
-            label15.Text = "label15";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(124, 177);
-            label16.Name = "label16";
-            label16.Size = new Size(44, 15);
-            label16.TabIndex = 5;
-            label16.Text = "label16";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(103, 216);
-            label17.Name = "label17";
-            label17.Size = new Size(44, 15);
-            label17.TabIndex = 6;
-            label17.Text = "label17";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(94, 289);
-            label18.Name = "label18";
-            label18.Size = new Size(44, 15);
-            label18.TabIndex = 7;
-            label18.Text = "label18";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(94, 348);
-            label19.Name = "label19";
-            label19.Size = new Size(44, 15);
-            label19.TabIndex = 8;
-            label19.Text = "label19";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(108, 391);
-            label20.Name = "label20";
-            label20.Size = new Size(44, 15);
-            label20.TabIndex = 9;
-            label20.Text = "label20";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(91, 416);
-            label21.Name = "label21";
-            label21.Size = new Size(44, 15);
-            label21.TabIndex = 10;
-            label21.Text = "label21";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Location = new Point(97, 128);
-            label22.Name = "label22";
-            label22.Size = new Size(44, 15);
-            label22.TabIndex = 3;
-            label22.Text = "label22";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Location = new Point(97, 178);
-            label23.Name = "label23";
-            label23.Size = new Size(44, 15);
-            label23.TabIndex = 4;
-            label23.Text = "label23";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(88, 220);
-            label24.Name = "label24";
-            label24.Size = new Size(44, 15);
-            label24.TabIndex = 5;
-            label24.Text = "label24";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new Point(97, 260);
-            label25.Name = "label25";
-            label25.Size = new Size(44, 15);
-            label25.TabIndex = 6;
-            label25.Text = "label25";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new Point(94, 314);
-            label26.Name = "label26";
-            label26.Size = new Size(44, 15);
-            label26.TabIndex = 7;
-            label26.Text = "label26";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new Point(90, 352);
-            label27.Name = "label27";
-            label27.Size = new Size(44, 15);
-            label27.TabIndex = 8;
-            label27.Text = "label27";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Location = new Point(94, 377);
-            label28.Name = "label28";
-            label28.Size = new Size(44, 15);
-            label28.TabIndex = 9;
-            label28.Text = "label28";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Location = new Point(93, 414);
-            label29.Name = "label29";
-            label29.Size = new Size(44, 15);
-            label29.TabIndex = 10;
-            label29.Text = "label29";
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(189, 126);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 11;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(225, 186);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(100, 23);
-            textBox12.TabIndex = 12;
-            // 
-            // textBox13
-            // 
-            textBox13.Location = new Point(219, 232);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(100, 23);
-            textBox13.TabIndex = 13;
-            // 
-            // textBox14
-            // 
-            textBox14.Location = new Point(204, 265);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(100, 23);
-            textBox14.TabIndex = 14;
-            // 
-            // textBox15
-            // 
-            textBox15.Location = new Point(202, 310);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(100, 23);
-            textBox15.TabIndex = 15;
-            // 
-            // textBox16
-            // 
-            textBox16.Location = new Point(195, 353);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(100, 23);
-            textBox16.TabIndex = 16;
-            // 
-            // textBox17
-            // 
-            textBox17.Location = new Point(220, 409);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(100, 23);
-            textBox17.TabIndex = 17;
-            // 
-            // textBox18
-            // 
-            textBox18.Location = new Point(200, 445);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(100, 23);
-            textBox18.TabIndex = 18;
-            // 
-            // textBox19
-            // 
-            textBox19.Location = new Point(229, 109);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(100, 23);
-            textBox19.TabIndex = 11;
-            // 
-            // textBox20
-            // 
-            textBox20.Location = new Point(240, 166);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(100, 23);
-            textBox20.TabIndex = 12;
-            // 
-            // textBox21
-            // 
-            textBox21.Location = new Point(267, 208);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(100, 23);
-            textBox21.TabIndex = 13;
-            // 
-            // textBox22
-            // 
-            textBox22.Location = new Point(258, 262);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(100, 23);
-            textBox22.TabIndex = 14;
-            // 
-            // textBox23
-            // 
-            textBox23.Location = new Point(231, 287);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(100, 23);
-            textBox23.TabIndex = 15;
-            // 
-            // textBox24
-            // 
-            textBox24.Location = new Point(236, 357);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(100, 23);
-            textBox24.TabIndex = 16;
-            // 
-            // textBox25
-            // 
-            textBox25.Location = new Point(245, 397);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(100, 23);
-            textBox25.TabIndex = 17;
-            // 
-            // textBox26
-            // 
-            textBox26.Location = new Point(198, 440);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(100, 23);
-            textBox26.TabIndex = 18;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(342, 454);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 19;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(31, 89);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 20;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(362, 460);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 19;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(37, 85);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 20;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(608, 318);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(240, 150);
-            dataGridView3.TabIndex = 21;
-            // 
-            // dataGridView4
-            // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(593, 289);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.Size = new Size(240, 150);
-            dataGridView4.TabIndex = 21;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(textBox34);
-            tabPage4.Controls.Add(textBox9);
-            tabPage4.Controls.Add(label38);
-            tabPage4.Controls.Add(label10);
-            tabPage4.Controls.Add(pictureBox2);
-            tabPage4.Controls.Add(button6);
-            tabPage4.Controls.Add(textBox33);
-            tabPage4.Controls.Add(textBox32);
-            tabPage4.Controls.Add(textBox31);
-            tabPage4.Controls.Add(textBox30);
-            tabPage4.Controls.Add(textBox29);
-            tabPage4.Controls.Add(textBox28);
-            tabPage4.Controls.Add(textBox27);
-            tabPage4.Controls.Add(label37);
-            tabPage4.Controls.Add(label36);
-            tabPage4.Controls.Add(label35);
-            tabPage4.Controls.Add(label34);
-            tabPage4.Controls.Add(label33);
-            tabPage4.Controls.Add(label32);
-            tabPage4.Controls.Add(label31);
-            tabPage4.Controls.Add(label30);
-            tabPage4.Location = new Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(971, 493);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Add a found animal";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.Location = new Point(391, 25);
-            label30.Name = "label30";
-            label30.Size = new Size(44, 15);
-            label30.TabIndex = 0;
-            label30.Text = "label30";
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Location = new Point(22, 76);
-            label31.Name = "label31";
-            label31.Size = new Size(44, 15);
-            label31.TabIndex = 1;
-            label31.Text = "label31";
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Location = new Point(22, 128);
-            label32.Name = "label32";
-            label32.Size = new Size(44, 15);
-            label32.TabIndex = 2;
-            label32.Text = "label32";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Location = new Point(22, 188);
-            label33.Name = "label33";
-            label33.Size = new Size(44, 15);
-            label33.TabIndex = 3;
-            label33.Text = "label33";
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Location = new Point(22, 244);
-            label34.Name = "label34";
-            label34.Size = new Size(44, 15);
-            label34.TabIndex = 4;
-            label34.Text = "label34";
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.Location = new Point(22, 305);
-            label35.Name = "label35";
-            label35.Size = new Size(44, 15);
-            label35.TabIndex = 5;
-            label35.Text = "label35";
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Location = new Point(22, 362);
-            label36.Name = "label36";
-            label36.Size = new Size(44, 15);
-            label36.TabIndex = 6;
-            label36.Text = "label36";
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Location = new Point(364, 76);
-            label37.Name = "label37";
-            label37.Size = new Size(44, 15);
-            label37.TabIndex = 7;
-            label37.Text = "label37";
-            // 
-            // textBox27
-            // 
-            textBox27.Location = new Point(99, 73);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(140, 23);
-            textBox27.TabIndex = 8;
-            // 
-            // textBox28
-            // 
-            textBox28.Location = new Point(99, 125);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(140, 23);
-            textBox28.TabIndex = 9;
-            // 
-            // textBox29
-            // 
-            textBox29.Location = new Point(99, 185);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(140, 23);
-            textBox29.TabIndex = 10;
-            // 
-            // textBox30
-            // 
-            textBox30.Location = new Point(99, 244);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(140, 23);
-            textBox30.TabIndex = 11;
-            // 
-            // textBox31
-            // 
-            textBox31.Location = new Point(99, 302);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(140, 23);
-            textBox31.TabIndex = 12;
-            // 
-            // textBox32
-            // 
-            textBox32.Location = new Point(99, 359);
-            textBox32.Name = "textBox32";
-            textBox32.Size = new Size(140, 23);
-            textBox32.TabIndex = 13;
-            // 
-            // textBox33
-            // 
-            textBox33.Location = new Point(446, 73);
-            textBox33.Name = "textBox33";
-            textBox33.Size = new Size(140, 23);
-            textBox33.TabIndex = 14;
-            // 
-            // button6
-            // 
-            button6.Location = new Point(829, 377);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 15;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(759, 185);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
-            pictureBox2.TabIndex = 16;
-            pictureBox2.TabStop = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(364, 128);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 15);
-            label10.TabIndex = 17;
-            label10.Text = "label10";
-            // 
-            // label38
-            // 
-            label38.AutoSize = true;
-            label38.Location = new Point(364, 188);
-            label38.Name = "label38";
-            label38.Size = new Size(44, 15);
-            label38.TabIndex = 18;
-            label38.Text = "label38";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(446, 125);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(140, 23);
-            textBox9.TabIndex = 19;
-            // 
-            // textBox34
-            // 
-            textBox34.Location = new Point(364, 231);
-            textBox34.Multiline = true;
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(222, 151);
-            textBox34.TabIndex = 20;
-            // 
-            // Form1
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(970, 513);
-            Controls.Add(tabControl1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
-            Text = "Form1";
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
-            tabPage4.ResumeLayout(false);
-            tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
-        }
+		/// <summary>
+		///  Required method for Designer support - do not modify
+		///  the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			Tab = new TabControl();
+			lostTab = new TabPage();
+			boxLostSpecies = new ComboBox();
+			boxLostGender = new ComboBox();
+			buttonLostImage = new Button();
+			pictureBoxLost = new PictureBox();
+			buttonSaveLost = new Button();
+			lblLostDesc = new Label();
+			lblLostGender = new Label();
+			lblLostSpecies = new Label();
+			lblLostLocation = new Label();
+			lblDateLost = new Label();
+			lblLostBreed = new Label();
+			lblLostColour = new Label();
+			lblLostAge = new Label();
+			lblLostName = new Label();
+			lblLostTitle = new Label();
+			txtLostDesc = new TextBox();
+			txtLostLocation = new TextBox();
+			txtDateLost = new TextBox();
+			txtLostBreed = new TextBox();
+			txtLostColour = new TextBox();
+			txtLostAge = new TextBox();
+			txtLostName = new TextBox();
+			lostAllTab = new TabPage();
+			dataGridViewLostAll = new DataGridView();
+			lblLostAllTitle = new Label();
+			buttonLostSearch = new Button();
+			boxLostAllSpecies = new ComboBox();
+			boxLostAllGender = new ComboBox();
+			lblLostAllGender = new Label();
+			lblLostAllSpecies = new Label();
+			lblLostAllLocation = new Label();
+			lblDateFoundAll = new Label();
+			label2 = new Label();
+			lblLostAllBreed = new Label();
+			lblLostAllColour = new Label();
+			lblLostAllAge = new Label();
+			lblLostAllName = new Label();
+			txtLostAllLocation = new TextBox();
+			txtDateFoundAll = new TextBox();
+			txtLostAllBreed = new TextBox();
+			txtLostAllColour = new TextBox();
+			txtLostAllAge = new TextBox();
+			txtLostAllName = new TextBox();
+			foundAllTab = new TabPage();
+			dataGridViewFoundAll = new DataGridView();
+			lblFoundAllTitle = new Label();
+			buttonFoundSearch = new Button();
+			boxFoundAllSpecies = new ComboBox();
+			boxFoundAllGender = new ComboBox();
+			lblFoundAllGender = new Label();
+			lblFoundAllSpecies = new Label();
+			lblFoundAllLocation = new Label();
+			lblDateLostAll = new Label();
+			lblFoundAllBreed = new Label();
+			lblFoundAllColour = new Label();
+			lblFoundAllAge = new Label();
+			lblFoundAllName = new Label();
+			txtFoundAllLocation = new TextBox();
+			txtDateLostAll = new TextBox();
+			txtFoundAllBreed = new TextBox();
+			txtFoundAllColour = new TextBox();
+			txtFoundAllAge = new TextBox();
+			txtFoundAllName = new TextBox();
+			foundTab = new TabPage();
+			lblDateFound = new Label();
+			txtDateFound = new TextBox();
+			boxFoundSpecies = new ComboBox();
+			boxFoundGender = new ComboBox();
+			buttonImageFound = new Button();
+			pictureBoxFound = new PictureBox();
+			buttonSaveFound = new Button();
+			lblFoundDesc = new Label();
+			lblFoundGender = new Label();
+			lblFoundSpecies = new Label();
+			lblFoundLocation = new Label();
+			lblFoundBreed = new Label();
+			lblFoundColour = new Label();
+			lblFoundAge = new Label();
+			lblFoundName = new Label();
+			lblFoundTitle = new Label();
+			txtFoundDesc = new TextBox();
+			txtFoundLocation = new TextBox();
+			txtFoundBreed = new TextBox();
+			txtFoundColour = new TextBox();
+			txtFoundAge = new TextBox();
+			txtFoundName = new TextBox();
+			Tab.SuspendLayout();
+			lostTab.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBoxLost).BeginInit();
+			lostAllTab.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewLostAll).BeginInit();
+			foundAllTab.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewFoundAll).BeginInit();
+			foundTab.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBoxFound).BeginInit();
+			SuspendLayout();
+			// 
+			// Tab
+			// 
+			Tab.Controls.Add(lostTab);
+			Tab.Controls.Add(lostAllTab);
+			Tab.Controls.Add(foundAllTab);
+			Tab.Controls.Add(foundTab);
+			Tab.Location = new Point(-5, 1);
+			Tab.Name = "Tab";
+			Tab.SelectedIndex = 0;
+			Tab.Size = new Size(1119, 695);
+			Tab.TabIndex = 0;
+			Tab.SelectedIndexChanged += lostTab_SelectedIndexChanged;
+			// 
+			// lostTab
+			// 
+			lostTab.BackColor = Color.AntiqueWhite;
+			lostTab.Controls.Add(boxLostSpecies);
+			lostTab.Controls.Add(boxLostGender);
+			lostTab.Controls.Add(buttonLostImage);
+			lostTab.Controls.Add(pictureBoxLost);
+			lostTab.Controls.Add(buttonSaveLost);
+			lostTab.Controls.Add(lblLostDesc);
+			lostTab.Controls.Add(lblLostGender);
+			lostTab.Controls.Add(lblLostSpecies);
+			lostTab.Controls.Add(lblLostLocation);
+			lostTab.Controls.Add(lblDateLost);
+			lostTab.Controls.Add(lblLostBreed);
+			lostTab.Controls.Add(lblLostColour);
+			lostTab.Controls.Add(lblLostAge);
+			lostTab.Controls.Add(lblLostName);
+			lostTab.Controls.Add(lblLostTitle);
+			lostTab.Controls.Add(txtLostDesc);
+			lostTab.Controls.Add(txtLostLocation);
+			lostTab.Controls.Add(txtDateLost);
+			lostTab.Controls.Add(txtLostBreed);
+			lostTab.Controls.Add(txtLostColour);
+			lostTab.Controls.Add(txtLostAge);
+			lostTab.Controls.Add(txtLostName);
+			lostTab.ForeColor = Color.Black;
+			lostTab.Location = new Point(4, 29);
+			lostTab.Name = "lostTab";
+			lostTab.Padding = new Padding(3);
+			lostTab.Size = new Size(1111, 662);
+			lostTab.TabIndex = 0;
+			lostTab.Text = "Add a lost animal";
+			// 
+			// boxLostSpecies
+			// 
+			boxLostSpecies.FormattingEnabled = true;
+			boxLostSpecies.Items.AddRange(new object[] { "Cat", "Dog", "Rabbit", "Parrot", "Hamster", "Guinea Pig", "Other" });
+			boxLostSpecies.Location = new Point(483, 136);
+			boxLostSpecies.Name = "boxLostSpecies";
+			boxLostSpecies.Size = new Size(151, 28);
+			boxLostSpecies.TabIndex = 25;
+			// 
+			// boxLostGender
+			// 
+			boxLostGender.FormattingEnabled = true;
+			boxLostGender.Items.AddRange(new object[] { "Female", "Male", "Castrated" });
+			boxLostGender.Location = new Point(483, 220);
+			boxLostGender.Name = "boxLostGender";
+			boxLostGender.Size = new Size(151, 28);
+			boxLostGender.TabIndex = 24;
+			boxLostGender.SelectedIndexChanged += boxLostGender_SelectedIndexChanged;
+			// 
+			// buttonLostImage
+			// 
+			buttonLostImage.BackColor = Color.FromArgb(114, 125, 113);
+			buttonLostImage.Font = new Font("Segoe UI", 10F);
+			buttonLostImage.ForeColor = Color.White;
+			buttonLostImage.Location = new Point(827, 136);
+			buttonLostImage.Margin = new Padding(3, 4, 3, 4);
+			buttonLostImage.Name = "buttonLostImage";
+			buttonLostImage.Size = new Size(202, 57);
+			buttonLostImage.TabIndex = 23;
+			buttonLostImage.Text = "Upload an image";
+			buttonLostImage.UseVisualStyleBackColor = false;
+			buttonLostImage.Click += buttonLostImage_Click;
+			// 
+			// pictureBoxLost
+			// 
+			pictureBoxLost.Location = new Point(774, 220);
+			pictureBoxLost.Margin = new Padding(3, 4, 3, 4);
+			pictureBoxLost.Name = "pictureBoxLost";
+			pictureBoxLost.Size = new Size(296, 359);
+			pictureBoxLost.TabIndex = 22;
+			pictureBoxLost.TabStop = false;
+			// 
+			// buttonSaveLost
+			// 
+			buttonSaveLost.BackColor = Color.FromArgb(114, 125, 113);
+			buttonSaveLost.Font = new Font("Segoe UI", 10F);
+			buttonSaveLost.ForeColor = Color.White;
+			buttonSaveLost.Location = new Point(865, 595);
+			buttonSaveLost.Margin = new Padding(3, 4, 3, 4);
+			buttonSaveLost.Name = "buttonSaveLost";
+			buttonSaveLost.Size = new Size(123, 46);
+			buttonSaveLost.TabIndex = 21;
+			buttonSaveLost.Text = "Save";
+			buttonSaveLost.UseVisualStyleBackColor = false;
+			buttonSaveLost.Click += buttonSaveLost_Click;
+			// 
+			// lblLostDesc
+			// 
+			lblLostDesc.AutoSize = true;
+			lblLostDesc.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostDesc.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostDesc.Location = new Point(359, 310);
+			lblLostDesc.Name = "lblLostDesc";
+			lblLostDesc.Size = new Size(89, 20);
+			lblLostDesc.TabIndex = 20;
+			lblLostDesc.Text = "Description";
+			// 
+			// lblLostGender
+			// 
+			lblLostGender.AutoSize = true;
+			lblLostGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostGender.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostGender.Location = new Point(359, 228);
+			lblLostGender.Name = "lblLostGender";
+			lblLostGender.Size = new Size(67, 20);
+			lblLostGender.TabIndex = 18;
+			lblLostGender.Text = "Gender*";
+			// 
+			// lblLostSpecies
+			// 
+			lblLostSpecies.AutoSize = true;
+			lblLostSpecies.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostSpecies.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostSpecies.Location = new Point(359, 140);
+			lblLostSpecies.Name = "lblLostSpecies";
+			lblLostSpecies.Size = new Size(67, 20);
+			lblLostSpecies.TabIndex = 17;
+			lblLostSpecies.Text = "Species*";
+			// 
+			// lblLostLocation
+			// 
+			lblLostLocation.AutoSize = true;
+			lblLostLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostLocation.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostLocation.Location = new Point(39, 559);
+			lblLostLocation.Name = "lblLostLocation";
+			lblLostLocation.Size = new Size(76, 20);
+			lblLostLocation.TabIndex = 16;
+			lblLostLocation.Text = "Location*";
+			// 
+			// lblDateLost
+			// 
+			lblDateLost.AutoSize = true;
+			lblDateLost.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblDateLost.ForeColor = Color.FromArgb(109, 76, 61);
+			lblDateLost.Location = new Point(39, 465);
+			lblDateLost.Name = "lblDateLost";
+			lblDateLost.Size = new Size(83, 20);
+			lblDateLost.TabIndex = 15;
+			lblDateLost.Text = "Date Lost*";
+			// 
+			// lblLostBreed
+			// 
+			lblLostBreed.AutoSize = true;
+			lblLostBreed.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostBreed.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostBreed.Location = new Point(39, 387);
+			lblLostBreed.Name = "lblLostBreed";
+			lblLostBreed.Size = new Size(50, 20);
+			lblLostBreed.TabIndex = 14;
+			lblLostBreed.Text = "Breed";
+			// 
+			// lblLostColour
+			// 
+			lblLostColour.AutoSize = true;
+			lblLostColour.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostColour.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostColour.Location = new Point(39, 310);
+			lblLostColour.Name = "lblLostColour";
+			lblLostColour.Size = new Size(62, 20);
+			lblLostColour.TabIndex = 13;
+			lblLostColour.Text = "Colour*";
+			lblLostColour.Click += lblLostColour_Click;
+			// 
+			// lblLostAge
+			// 
+			lblLostAge.AutoSize = true;
+			lblLostAge.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAge.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAge.Location = new Point(39, 228);
+			lblLostAge.Name = "lblLostAge";
+			lblLostAge.Size = new Size(37, 20);
+			lblLostAge.TabIndex = 12;
+			lblLostAge.Text = "Age";
+			// 
+			// lblLostName
+			// 
+			lblLostName.AutoSize = true;
+			lblLostName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostName.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostName.Location = new Point(39, 144);
+			lblLostName.Name = "lblLostName";
+			lblLostName.Size = new Size(58, 20);
+			lblLostName.TabIndex = 11;
+			lblLostName.Text = "Name*";
+			// 
+			// lblLostTitle
+			// 
+			lblLostTitle.AutoSize = true;
+			lblLostTitle.Font = new Font("Gill Sans MT Condensed", 30F, FontStyle.Bold);
+			lblLostTitle.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostTitle.Location = new Point(359, 32);
+			lblLostTitle.Name = "lblLostTitle";
+			lblLostTitle.Size = new Size(409, 63);
+			lblLostTitle.TabIndex = 10;
+			lblLostTitle.Text = "Have you lost your pet?";
+			lblLostTitle.Click += label1_Click;
+			// 
+			// txtLostDesc
+			// 
+			txtLostDesc.Location = new Point(359, 351);
+			txtLostDesc.Margin = new Padding(3, 4, 3, 4);
+			txtLostDesc.Multiline = true;
+			txtLostDesc.Name = "txtLostDesc";
+			txtLostDesc.Size = new Size(348, 228);
+			txtLostDesc.TabIndex = 9;
+			// 
+			// txtLostLocation
+			// 
+			txtLostLocation.Location = new Point(131, 552);
+			txtLostLocation.Margin = new Padding(3, 4, 3, 4);
+			txtLostLocation.Name = "txtLostLocation";
+			txtLostLocation.Size = new Size(153, 27);
+			txtLostLocation.TabIndex = 5;
+			txtLostLocation.TextChanged += textBox6_TextChanged;
+			// 
+			// txtDateLost
+			// 
+			txtDateLost.Location = new Point(131, 465);
+			txtDateLost.Margin = new Padding(3, 4, 3, 4);
+			txtDateLost.Name = "txtDateLost";
+			txtDateLost.Size = new Size(153, 27);
+			txtDateLost.TabIndex = 4;
+			// 
+			// txtLostBreed
+			// 
+			txtLostBreed.Location = new Point(131, 380);
+			txtLostBreed.Margin = new Padding(3, 4, 3, 4);
+			txtLostBreed.Name = "txtLostBreed";
+			txtLostBreed.Size = new Size(153, 27);
+			txtLostBreed.TabIndex = 3;
+			// 
+			// txtLostColour
+			// 
+			txtLostColour.Location = new Point(131, 303);
+			txtLostColour.Margin = new Padding(3, 4, 3, 4);
+			txtLostColour.Name = "txtLostColour";
+			txtLostColour.Size = new Size(153, 27);
+			txtLostColour.TabIndex = 2;
+			// 
+			// txtLostAge
+			// 
+			txtLostAge.Location = new Point(131, 221);
+			txtLostAge.Margin = new Padding(3, 4, 3, 4);
+			txtLostAge.Name = "txtLostAge";
+			txtLostAge.Size = new Size(153, 27);
+			txtLostAge.TabIndex = 1;
+			// 
+			// txtLostName
+			// 
+			txtLostName.Location = new Point(131, 137);
+			txtLostName.Margin = new Padding(3, 4, 3, 4);
+			txtLostName.Name = "txtLostName";
+			txtLostName.Size = new Size(153, 27);
+			txtLostName.TabIndex = 0;
+			// 
+			// lostAllTab
+			// 
+			lostAllTab.BackColor = Color.AntiqueWhite;
+			lostAllTab.Controls.Add(dataGridViewLostAll);
+			lostAllTab.Controls.Add(lblLostAllTitle);
+			lostAllTab.Controls.Add(buttonLostSearch);
+			lostAllTab.Controls.Add(boxLostAllSpecies);
+			lostAllTab.Controls.Add(boxLostAllGender);
+			lostAllTab.Controls.Add(lblLostAllGender);
+			lostAllTab.Controls.Add(lblLostAllSpecies);
+			lostAllTab.Controls.Add(lblLostAllLocation);
+			lostAllTab.Controls.Add(lblDateFoundAll);
+			lostAllTab.Controls.Add(label2);
+			lostAllTab.Controls.Add(lblLostAllBreed);
+			lostAllTab.Controls.Add(lblLostAllColour);
+			lostAllTab.Controls.Add(lblLostAllAge);
+			lostAllTab.Controls.Add(lblLostAllName);
+			lostAllTab.Controls.Add(txtLostAllLocation);
+			lostAllTab.Controls.Add(txtDateFoundAll);
+			lostAllTab.Controls.Add(txtLostAllBreed);
+			lostAllTab.Controls.Add(txtLostAllColour);
+			lostAllTab.Controls.Add(txtLostAllAge);
+			lostAllTab.Controls.Add(txtLostAllName);
+			lostAllTab.Location = new Point(4, 29);
+			lostAllTab.Name = "lostAllTab";
+			lostAllTab.Padding = new Padding(3);
+			lostAllTab.Size = new Size(1111, 662);
+			lostAllTab.TabIndex = 1;
+			lostAllTab.Text = "View lost animals";
+			// 
+			// dataGridViewLostAll
+			// 
+			dataGridViewLostAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewLostAll.Location = new Point(340, 88);
+			dataGridViewLostAll.Margin = new Padding(3, 4, 3, 4);
+			dataGridViewLostAll.Name = "dataGridViewLostAll";
+			dataGridViewLostAll.RowHeadersWidth = 51;
+			dataGridViewLostAll.Size = new Size(728, 477);
+			dataGridViewLostAll.TabIndex = 1;
+			// 
+			// lblLostAllTitle
+			// 
+			lblLostAllTitle.AutoSize = true;
+			lblLostAllTitle.Font = new Font("Gill Sans MT Condensed", 30F, FontStyle.Bold);
+			lblLostAllTitle.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllTitle.Location = new Point(616, 21);
+			lblLostAllTitle.Name = "lblLostAllTitle";
+			lblLostAllTitle.Size = new Size(169, 63);
+			lblLostAllTitle.TabIndex = 38;
+			lblLostAllTitle.Text = "Lost Pets";
+			// 
+			// buttonLostSearch
+			// 
+			buttonLostSearch.BackColor = Color.FromArgb(114, 125, 113);
+			buttonLostSearch.Font = new Font("Segoe UI", 10F);
+			buttonLostSearch.ForeColor = Color.White;
+			buttonLostSearch.Location = new Point(340, 595);
+			buttonLostSearch.Margin = new Padding(3, 4, 3, 4);
+			buttonLostSearch.Name = "buttonLostSearch";
+			buttonLostSearch.Size = new Size(123, 46);
+			buttonLostSearch.TabIndex = 37;
+			buttonLostSearch.Text = "Search";
+			buttonLostSearch.UseVisualStyleBackColor = false;
+			// 
+			// boxLostAllSpecies
+			// 
+			boxLostAllSpecies.FormattingEnabled = true;
+			boxLostAllSpecies.Items.AddRange(new object[] { "Cat", "Dog", "Rabbit", "Parrot", "Hamster", "Guinea Pig", "Other" });
+			boxLostAllSpecies.Location = new Point(129, 537);
+			boxLostAllSpecies.Name = "boxLostAllSpecies";
+			boxLostAllSpecies.Size = new Size(151, 28);
+			boxLostAllSpecies.TabIndex = 36;
+			// 
+			// boxLostAllGender
+			// 
+			boxLostAllGender.FormattingEnabled = true;
+			boxLostAllGender.Items.AddRange(new object[] { "Female", "Male", "Castrated" });
+			boxLostAllGender.Location = new Point(129, 613);
+			boxLostAllGender.Name = "boxLostAllGender";
+			boxLostAllGender.Size = new Size(151, 28);
+			boxLostAllGender.TabIndex = 35;
+			// 
+			// lblLostAllGender
+			// 
+			lblLostAllGender.AutoSize = true;
+			lblLostAllGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllGender.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllGender.Location = new Point(37, 621);
+			lblLostAllGender.Name = "lblLostAllGender";
+			lblLostAllGender.Size = new Size(67, 20);
+			lblLostAllGender.TabIndex = 34;
+			lblLostAllGender.Text = "Gender*";
+			// 
+			// lblLostAllSpecies
+			// 
+			lblLostAllSpecies.AutoSize = true;
+			lblLostAllSpecies.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllSpecies.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllSpecies.Location = new Point(37, 545);
+			lblLostAllSpecies.Name = "lblLostAllSpecies";
+			lblLostAllSpecies.Size = new Size(67, 20);
+			lblLostAllSpecies.TabIndex = 33;
+			lblLostAllSpecies.Text = "Species*";
+			// 
+			// lblLostAllLocation
+			// 
+			lblLostAllLocation.AutoSize = true;
+			lblLostAllLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllLocation.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllLocation.Location = new Point(37, 475);
+			lblLostAllLocation.Name = "lblLostAllLocation";
+			lblLostAllLocation.Size = new Size(76, 20);
+			lblLostAllLocation.TabIndex = 32;
+			lblLostAllLocation.Text = "Location*";
+			// 
+			// lblDateFoundAll
+			// 
+			lblDateFoundAll.AutoSize = true;
+			lblDateFoundAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblDateFoundAll.ForeColor = Color.FromArgb(109, 76, 61);
+			lblDateFoundAll.Location = new Point(37, 390);
+			lblDateFoundAll.Name = "lblDateFoundAll";
+			lblDateFoundAll.Size = new Size(60, 40);
+			lblDateFoundAll.TabIndex = 31;
+			lblDateFoundAll.Text = " Date\r\nFound*";
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label2.ForeColor = Color.FromArgb(109, 76, 61);
+			label2.Location = new Point(37, 390);
+			label2.Name = "label2";
+			label2.Size = new Size(60, 40);
+			label2.TabIndex = 31;
+			label2.Text = " Date\r\nFound*";
+			// 
+			// lblLostAllBreed
+			// 
+			lblLostAllBreed.AutoSize = true;
+			lblLostAllBreed.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllBreed.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllBreed.Location = new Point(37, 315);
+			lblLostAllBreed.Name = "lblLostAllBreed";
+			lblLostAllBreed.Size = new Size(50, 20);
+			lblLostAllBreed.TabIndex = 30;
+			lblLostAllBreed.Text = "Breed";
+			// 
+			// lblLostAllColour
+			// 
+			lblLostAllColour.AutoSize = true;
+			lblLostAllColour.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllColour.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllColour.Location = new Point(37, 242);
+			lblLostAllColour.Name = "lblLostAllColour";
+			lblLostAllColour.Size = new Size(62, 20);
+			lblLostAllColour.TabIndex = 29;
+			lblLostAllColour.Text = "Colour*";
+			// 
+			// lblLostAllAge
+			// 
+			lblLostAllAge.AutoSize = true;
+			lblLostAllAge.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllAge.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllAge.Location = new Point(37, 172);
+			lblLostAllAge.Name = "lblLostAllAge";
+			lblLostAllAge.Size = new Size(37, 20);
+			lblLostAllAge.TabIndex = 28;
+			lblLostAllAge.Text = "Age";
+			// 
+			// lblLostAllName
+			// 
+			lblLostAllName.AutoSize = true;
+			lblLostAllName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblLostAllName.ForeColor = Color.FromArgb(109, 76, 61);
+			lblLostAllName.Location = new Point(37, 95);
+			lblLostAllName.Name = "lblLostAllName";
+			lblLostAllName.Size = new Size(51, 20);
+			lblLostAllName.TabIndex = 27;
+			lblLostAllName.Text = "Name";
+			// 
+			// txtLostAllLocation
+			// 
+			txtLostAllLocation.Location = new Point(129, 468);
+			txtLostAllLocation.Margin = new Padding(3, 4, 3, 4);
+			txtLostAllLocation.Name = "txtLostAllLocation";
+			txtLostAllLocation.Size = new Size(153, 27);
+			txtLostAllLocation.TabIndex = 26;
+			// 
+			// txtDateFoundAll
+			// 
+			txtDateFoundAll.Location = new Point(129, 390);
+			txtDateFoundAll.Margin = new Padding(3, 4, 3, 4);
+			txtDateFoundAll.Name = "txtDateFoundAll";
+			txtDateFoundAll.Size = new Size(153, 27);
+			txtDateFoundAll.TabIndex = 25;
+			txtDateFoundAll.TextChanged += textBox8_TextChanged;
+			// 
+			// txtLostAllBreed
+			// 
+			txtLostAllBreed.Location = new Point(129, 308);
+			txtLostAllBreed.Margin = new Padding(3, 4, 3, 4);
+			txtLostAllBreed.Name = "txtLostAllBreed";
+			txtLostAllBreed.Size = new Size(153, 27);
+			txtLostAllBreed.TabIndex = 24;
+			// 
+			// txtLostAllColour
+			// 
+			txtLostAllColour.Location = new Point(129, 235);
+			txtLostAllColour.Margin = new Padding(3, 4, 3, 4);
+			txtLostAllColour.Name = "txtLostAllColour";
+			txtLostAllColour.Size = new Size(153, 27);
+			txtLostAllColour.TabIndex = 23;
+			// 
+			// txtLostAllAge
+			// 
+			txtLostAllAge.Location = new Point(129, 165);
+			txtLostAllAge.Margin = new Padding(3, 4, 3, 4);
+			txtLostAllAge.Name = "txtLostAllAge";
+			txtLostAllAge.Size = new Size(153, 27);
+			txtLostAllAge.TabIndex = 22;
+			// 
+			// txtLostAllName
+			// 
+			txtLostAllName.Location = new Point(129, 88);
+			txtLostAllName.Margin = new Padding(3, 4, 3, 4);
+			txtLostAllName.Name = "txtLostAllName";
+			txtLostAllName.Size = new Size(153, 27);
+			txtLostAllName.TabIndex = 21;
+			// 
+			// foundAllTab
+			// 
+			foundAllTab.BackColor = Color.AntiqueWhite;
+			foundAllTab.Controls.Add(dataGridViewFoundAll);
+			foundAllTab.Controls.Add(lblFoundAllTitle);
+			foundAllTab.Controls.Add(buttonFoundSearch);
+			foundAllTab.Controls.Add(boxFoundAllSpecies);
+			foundAllTab.Controls.Add(boxFoundAllGender);
+			foundAllTab.Controls.Add(lblFoundAllGender);
+			foundAllTab.Controls.Add(lblFoundAllSpecies);
+			foundAllTab.Controls.Add(lblFoundAllLocation);
+			foundAllTab.Controls.Add(lblDateLostAll);
+			foundAllTab.Controls.Add(lblFoundAllBreed);
+			foundAllTab.Controls.Add(lblFoundAllColour);
+			foundAllTab.Controls.Add(lblFoundAllAge);
+			foundAllTab.Controls.Add(lblFoundAllName);
+			foundAllTab.Controls.Add(txtFoundAllLocation);
+			foundAllTab.Controls.Add(txtDateLostAll);
+			foundAllTab.Controls.Add(txtFoundAllBreed);
+			foundAllTab.Controls.Add(txtFoundAllColour);
+			foundAllTab.Controls.Add(txtFoundAllAge);
+			foundAllTab.Controls.Add(txtFoundAllName);
+			foundAllTab.Location = new Point(4, 29);
+			foundAllTab.Margin = new Padding(3, 4, 3, 4);
+			foundAllTab.Name = "foundAllTab";
+			foundAllTab.Size = new Size(1111, 662);
+			foundAllTab.TabIndex = 2;
+			foundAllTab.Text = "View found animals";
+			// 
+			// dataGridViewFoundAll
+			// 
+			dataGridViewFoundAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewFoundAll.Location = new Point(343, 88);
+			dataGridViewFoundAll.Margin = new Padding(3, 4, 3, 4);
+			dataGridViewFoundAll.Name = "dataGridViewFoundAll";
+			dataGridViewFoundAll.RowHeadersWidth = 51;
+			dataGridViewFoundAll.Size = new Size(728, 477);
+			dataGridViewFoundAll.TabIndex = 40;
+			// 
+			// lblFoundAllTitle
+			// 
+			lblFoundAllTitle.AutoSize = true;
+			lblFoundAllTitle.Font = new Font("Gill Sans MT Condensed", 30F, FontStyle.Bold);
+			lblFoundAllTitle.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllTitle.Location = new Point(608, 21);
+			lblFoundAllTitle.Name = "lblFoundAllTitle";
+			lblFoundAllTitle.Size = new Size(200, 63);
+			lblFoundAllTitle.TabIndex = 59;
+			lblFoundAllTitle.Text = "Found Pets";
+			// 
+			// buttonFoundSearch
+			// 
+			buttonFoundSearch.BackColor = Color.FromArgb(114, 125, 113);
+			buttonFoundSearch.Font = new Font("Segoe UI", 10F);
+			buttonFoundSearch.ForeColor = Color.White;
+			buttonFoundSearch.Location = new Point(343, 595);
+			buttonFoundSearch.Margin = new Padding(3, 4, 3, 4);
+			buttonFoundSearch.Name = "buttonFoundSearch";
+			buttonFoundSearch.Size = new Size(123, 46);
+			buttonFoundSearch.TabIndex = 58;
+			buttonFoundSearch.Text = "Search";
+			buttonFoundSearch.UseVisualStyleBackColor = false;
+			// 
+			// boxFoundAllSpecies
+			// 
+			boxFoundAllSpecies.FormattingEnabled = true;
+			boxFoundAllSpecies.Items.AddRange(new object[] { "Cat", "Dog", "Rabbit", "Parrot", "Hamster", "Guinea Pig", "Other" });
+			boxFoundAllSpecies.Location = new Point(132, 537);
+			boxFoundAllSpecies.Name = "boxFoundAllSpecies";
+			boxFoundAllSpecies.Size = new Size(151, 28);
+			boxFoundAllSpecies.TabIndex = 57;
+			// 
+			// boxFoundAllGender
+			// 
+			boxFoundAllGender.FormattingEnabled = true;
+			boxFoundAllGender.Items.AddRange(new object[] { "Female", "Male", "Castrated" });
+			boxFoundAllGender.Location = new Point(132, 613);
+			boxFoundAllGender.Name = "boxFoundAllGender";
+			boxFoundAllGender.Size = new Size(151, 28);
+			boxFoundAllGender.TabIndex = 56;
+			// 
+			// lblFoundAllGender
+			// 
+			lblFoundAllGender.AutoSize = true;
+			lblFoundAllGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllGender.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllGender.Location = new Point(40, 621);
+			lblFoundAllGender.Name = "lblFoundAllGender";
+			lblFoundAllGender.Size = new Size(67, 20);
+			lblFoundAllGender.TabIndex = 55;
+			lblFoundAllGender.Text = "Gender*";
+			// 
+			// lblFoundAllSpecies
+			// 
+			lblFoundAllSpecies.AutoSize = true;
+			lblFoundAllSpecies.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllSpecies.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllSpecies.Location = new Point(40, 545);
+			lblFoundAllSpecies.Name = "lblFoundAllSpecies";
+			lblFoundAllSpecies.Size = new Size(67, 20);
+			lblFoundAllSpecies.TabIndex = 54;
+			lblFoundAllSpecies.Text = "Species*";
+			// 
+			// lblFoundAllLocation
+			// 
+			lblFoundAllLocation.AutoSize = true;
+			lblFoundAllLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllLocation.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllLocation.Location = new Point(40, 475);
+			lblFoundAllLocation.Name = "lblFoundAllLocation";
+			lblFoundAllLocation.Size = new Size(76, 20);
+			lblFoundAllLocation.TabIndex = 53;
+			lblFoundAllLocation.Text = "Location*";
+			// 
+			// lblDateLostAll
+			// 
+			lblDateLostAll.AutoSize = true;
+			lblDateLostAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblDateLostAll.ForeColor = Color.FromArgb(109, 76, 61);
+			lblDateLostAll.Location = new Point(40, 397);
+			lblDateLostAll.Name = "lblDateLostAll";
+			lblDateLostAll.Size = new Size(83, 20);
+			lblDateLostAll.TabIndex = 52;
+			lblDateLostAll.Text = "Date Lost*\r\n";
+			// 
+			// lblFoundAllBreed
+			// 
+			lblFoundAllBreed.AutoSize = true;
+			lblFoundAllBreed.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllBreed.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllBreed.Location = new Point(40, 315);
+			lblFoundAllBreed.Name = "lblFoundAllBreed";
+			lblFoundAllBreed.Size = new Size(50, 20);
+			lblFoundAllBreed.TabIndex = 50;
+			lblFoundAllBreed.Text = "Breed";
+			// 
+			// lblFoundAllColour
+			// 
+			lblFoundAllColour.AutoSize = true;
+			lblFoundAllColour.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllColour.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllColour.Location = new Point(40, 242);
+			lblFoundAllColour.Name = "lblFoundAllColour";
+			lblFoundAllColour.Size = new Size(62, 20);
+			lblFoundAllColour.TabIndex = 49;
+			lblFoundAllColour.Text = "Colour*";
+			// 
+			// lblFoundAllAge
+			// 
+			lblFoundAllAge.AutoSize = true;
+			lblFoundAllAge.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllAge.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllAge.Location = new Point(40, 172);
+			lblFoundAllAge.Name = "lblFoundAllAge";
+			lblFoundAllAge.Size = new Size(37, 20);
+			lblFoundAllAge.TabIndex = 48;
+			lblFoundAllAge.Text = "Age";
+			// 
+			// lblFoundAllName
+			// 
+			lblFoundAllName.AutoSize = true;
+			lblFoundAllName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAllName.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAllName.Location = new Point(40, 95);
+			lblFoundAllName.Name = "lblFoundAllName";
+			lblFoundAllName.Size = new Size(58, 20);
+			lblFoundAllName.TabIndex = 47;
+			lblFoundAllName.Text = "Name*";
+			// 
+			// txtFoundAllLocation
+			// 
+			txtFoundAllLocation.Location = new Point(132, 468);
+			txtFoundAllLocation.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAllLocation.Name = "txtFoundAllLocation";
+			txtFoundAllLocation.Size = new Size(153, 27);
+			txtFoundAllLocation.TabIndex = 46;
+			// 
+			// txtDateLostAll
+			// 
+			txtDateLostAll.Location = new Point(132, 390);
+			txtDateLostAll.Margin = new Padding(3, 4, 3, 4);
+			txtDateLostAll.Name = "txtDateLostAll";
+			txtDateLostAll.Size = new Size(153, 27);
+			txtDateLostAll.TabIndex = 45;
+			// 
+			// txtFoundAllBreed
+			// 
+			txtFoundAllBreed.Location = new Point(132, 308);
+			txtFoundAllBreed.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAllBreed.Name = "txtFoundAllBreed";
+			txtFoundAllBreed.Size = new Size(153, 27);
+			txtFoundAllBreed.TabIndex = 44;
+			// 
+			// txtFoundAllColour
+			// 
+			txtFoundAllColour.Location = new Point(132, 235);
+			txtFoundAllColour.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAllColour.Name = "txtFoundAllColour";
+			txtFoundAllColour.Size = new Size(153, 27);
+			txtFoundAllColour.TabIndex = 43;
+			// 
+			// txtFoundAllAge
+			// 
+			txtFoundAllAge.Location = new Point(132, 165);
+			txtFoundAllAge.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAllAge.Name = "txtFoundAllAge";
+			txtFoundAllAge.Size = new Size(153, 27);
+			txtFoundAllAge.TabIndex = 42;
+			// 
+			// txtFoundAllName
+			// 
+			txtFoundAllName.Location = new Point(132, 88);
+			txtFoundAllName.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAllName.Name = "txtFoundAllName";
+			txtFoundAllName.Size = new Size(153, 27);
+			txtFoundAllName.TabIndex = 41;
+			// 
+			// foundTab
+			// 
+			foundTab.BackColor = Color.AntiqueWhite;
+			foundTab.Controls.Add(lblDateFound);
+			foundTab.Controls.Add(txtDateFound);
+			foundTab.Controls.Add(boxFoundSpecies);
+			foundTab.Controls.Add(boxFoundGender);
+			foundTab.Controls.Add(buttonImageFound);
+			foundTab.Controls.Add(pictureBoxFound);
+			foundTab.Controls.Add(buttonSaveFound);
+			foundTab.Controls.Add(lblFoundDesc);
+			foundTab.Controls.Add(lblFoundGender);
+			foundTab.Controls.Add(lblFoundSpecies);
+			foundTab.Controls.Add(lblFoundLocation);
+			foundTab.Controls.Add(lblFoundBreed);
+			foundTab.Controls.Add(lblFoundColour);
+			foundTab.Controls.Add(lblFoundAge);
+			foundTab.Controls.Add(lblFoundName);
+			foundTab.Controls.Add(lblFoundTitle);
+			foundTab.Controls.Add(txtFoundDesc);
+			foundTab.Controls.Add(txtFoundLocation);
+			foundTab.Controls.Add(txtFoundBreed);
+			foundTab.Controls.Add(txtFoundColour);
+			foundTab.Controls.Add(txtFoundAge);
+			foundTab.Controls.Add(txtFoundName);
+			foundTab.Location = new Point(4, 29);
+			foundTab.Margin = new Padding(3, 4, 3, 4);
+			foundTab.Name = "foundTab";
+			foundTab.Size = new Size(1111, 662);
+			foundTab.TabIndex = 3;
+			foundTab.Text = "Add a found animal";
+			// 
+			// lblDateFound
+			// 
+			lblDateFound.AutoSize = true;
+			lblDateFound.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblDateFound.ForeColor = Color.FromArgb(109, 76, 61);
+			lblDateFound.Location = new Point(40, 458);
+			lblDateFound.Name = "lblDateFound";
+			lblDateFound.Size = new Size(60, 40);
+			lblDateFound.TabIndex = 49;
+			lblDateFound.Text = " Date\r\nFound*";
+			// 
+			// txtDateFound
+			// 
+			txtDateFound.Location = new Point(132, 458);
+			txtDateFound.Margin = new Padding(3, 4, 3, 4);
+			txtDateFound.Name = "txtDateFound";
+			txtDateFound.Size = new Size(153, 27);
+			txtDateFound.TabIndex = 48;
+			// 
+			// boxFoundSpecies
+			// 
+			boxFoundSpecies.FormattingEnabled = true;
+			boxFoundSpecies.Items.AddRange(new object[] { "Cat", "Dog", "Rabbit", "Parrot", "Hamster", "Guinea Pig", "Other" });
+			boxFoundSpecies.Location = new Point(484, 131);
+			boxFoundSpecies.Name = "boxFoundSpecies";
+			boxFoundSpecies.Size = new Size(151, 28);
+			boxFoundSpecies.TabIndex = 47;
+			// 
+			// boxFoundGender
+			// 
+			boxFoundGender.FormattingEnabled = true;
+			boxFoundGender.Items.AddRange(new object[] { "Female", "Male", "Castrated" });
+			boxFoundGender.Location = new Point(484, 215);
+			boxFoundGender.Name = "boxFoundGender";
+			boxFoundGender.Size = new Size(151, 28);
+			boxFoundGender.TabIndex = 46;
+			// 
+			// buttonImageFound
+			// 
+			buttonImageFound.BackColor = Color.FromArgb(114, 125, 113);
+			buttonImageFound.Font = new Font("Segoe UI", 10F);
+			buttonImageFound.ForeColor = Color.White;
+			buttonImageFound.Location = new Point(828, 131);
+			buttonImageFound.Margin = new Padding(3, 4, 3, 4);
+			buttonImageFound.Name = "buttonImageFound";
+			buttonImageFound.Size = new Size(202, 57);
+			buttonImageFound.TabIndex = 45;
+			buttonImageFound.Text = "Upload an image";
+			buttonImageFound.UseVisualStyleBackColor = false;
+			// 
+			// pictureBoxFound
+			// 
+			pictureBoxFound.Location = new Point(775, 215);
+			pictureBoxFound.Margin = new Padding(3, 4, 3, 4);
+			pictureBoxFound.Name = "pictureBoxFound";
+			pictureBoxFound.Size = new Size(296, 359);
+			pictureBoxFound.TabIndex = 44;
+			pictureBoxFound.TabStop = false;
+			// 
+			// buttonSaveFound
+			// 
+			buttonSaveFound.BackColor = Color.FromArgb(114, 125, 113);
+			buttonSaveFound.Font = new Font("Segoe UI", 10F);
+			buttonSaveFound.ForeColor = Color.White;
+			buttonSaveFound.Location = new Point(866, 590);
+			buttonSaveFound.Margin = new Padding(3, 4, 3, 4);
+			buttonSaveFound.Name = "buttonSaveFound";
+			buttonSaveFound.Size = new Size(123, 46);
+			buttonSaveFound.TabIndex = 43;
+			buttonSaveFound.Text = "Save";
+			buttonSaveFound.UseVisualStyleBackColor = false;
+			// 
+			// lblFoundDesc
+			// 
+			lblFoundDesc.AutoSize = true;
+			lblFoundDesc.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundDesc.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundDesc.Location = new Point(360, 305);
+			lblFoundDesc.Name = "lblFoundDesc";
+			lblFoundDesc.Size = new Size(89, 20);
+			lblFoundDesc.TabIndex = 42;
+			lblFoundDesc.Text = "Description";
+			// 
+			// lblFoundGender
+			// 
+			lblFoundGender.AutoSize = true;
+			lblFoundGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundGender.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundGender.Location = new Point(360, 223);
+			lblFoundGender.Name = "lblFoundGender";
+			lblFoundGender.Size = new Size(67, 20);
+			lblFoundGender.TabIndex = 41;
+			lblFoundGender.Text = "Gender*";
+			// 
+			// lblFoundSpecies
+			// 
+			lblFoundSpecies.AutoSize = true;
+			lblFoundSpecies.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundSpecies.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundSpecies.Location = new Point(360, 135);
+			lblFoundSpecies.Name = "lblFoundSpecies";
+			lblFoundSpecies.Size = new Size(67, 20);
+			lblFoundSpecies.TabIndex = 40;
+			lblFoundSpecies.Text = "Species*";
+			// 
+			// lblFoundLocation
+			// 
+			lblFoundLocation.AutoSize = true;
+			lblFoundLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundLocation.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundLocation.Location = new Point(40, 554);
+			lblFoundLocation.Name = "lblFoundLocation";
+			lblFoundLocation.Size = new Size(76, 20);
+			lblFoundLocation.TabIndex = 39;
+			lblFoundLocation.Text = "Location*";
+			// 
+			// lblFoundBreed
+			// 
+			lblFoundBreed.AutoSize = true;
+			lblFoundBreed.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundBreed.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundBreed.Location = new Point(40, 382);
+			lblFoundBreed.Name = "lblFoundBreed";
+			lblFoundBreed.Size = new Size(50, 20);
+			lblFoundBreed.TabIndex = 37;
+			lblFoundBreed.Text = "Breed";
+			// 
+			// lblFoundColour
+			// 
+			lblFoundColour.AutoSize = true;
+			lblFoundColour.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundColour.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundColour.Location = new Point(40, 305);
+			lblFoundColour.Name = "lblFoundColour";
+			lblFoundColour.Size = new Size(62, 20);
+			lblFoundColour.TabIndex = 36;
+			lblFoundColour.Text = "Colour*";
+			// 
+			// lblFoundAge
+			// 
+			lblFoundAge.AutoSize = true;
+			lblFoundAge.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundAge.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundAge.Location = new Point(40, 223);
+			lblFoundAge.Name = "lblFoundAge";
+			lblFoundAge.Size = new Size(37, 20);
+			lblFoundAge.TabIndex = 35;
+			lblFoundAge.Text = "Age";
+			// 
+			// lblFoundName
+			// 
+			lblFoundName.AutoSize = true;
+			lblFoundName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			lblFoundName.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundName.Location = new Point(40, 139);
+			lblFoundName.Name = "lblFoundName";
+			lblFoundName.Size = new Size(51, 20);
+			lblFoundName.TabIndex = 34;
+			lblFoundName.Text = "Name";
+			// 
+			// lblFoundTitle
+			// 
+			lblFoundTitle.AutoSize = true;
+			lblFoundTitle.Font = new Font("Gill Sans MT Condensed", 30F, FontStyle.Bold);
+			lblFoundTitle.ForeColor = Color.FromArgb(109, 76, 61);
+			lblFoundTitle.Location = new Point(360, 27);
+			lblFoundTitle.Name = "lblFoundTitle";
+			lblFoundTitle.Size = new Size(391, 63);
+			lblFoundTitle.TabIndex = 33;
+			lblFoundTitle.Text = "Have you found a pet?";
+			// 
+			// txtFoundDesc
+			// 
+			txtFoundDesc.Location = new Point(360, 346);
+			txtFoundDesc.Margin = new Padding(3, 4, 3, 4);
+			txtFoundDesc.Multiline = true;
+			txtFoundDesc.Name = "txtFoundDesc";
+			txtFoundDesc.Size = new Size(348, 228);
+			txtFoundDesc.TabIndex = 32;
+			// 
+			// txtFoundLocation
+			// 
+			txtFoundLocation.Location = new Point(132, 547);
+			txtFoundLocation.Margin = new Padding(3, 4, 3, 4);
+			txtFoundLocation.Name = "txtFoundLocation";
+			txtFoundLocation.Size = new Size(153, 27);
+			txtFoundLocation.TabIndex = 31;
+			// 
+			// txtFoundBreed
+			// 
+			txtFoundBreed.Location = new Point(132, 375);
+			txtFoundBreed.Margin = new Padding(3, 4, 3, 4);
+			txtFoundBreed.Name = "txtFoundBreed";
+			txtFoundBreed.Size = new Size(153, 27);
+			txtFoundBreed.TabIndex = 29;
+			// 
+			// txtFoundColour
+			// 
+			txtFoundColour.Location = new Point(132, 298);
+			txtFoundColour.Margin = new Padding(3, 4, 3, 4);
+			txtFoundColour.Name = "txtFoundColour";
+			txtFoundColour.Size = new Size(153, 27);
+			txtFoundColour.TabIndex = 28;
+			// 
+			// txtFoundAge
+			// 
+			txtFoundAge.Location = new Point(132, 216);
+			txtFoundAge.Margin = new Padding(3, 4, 3, 4);
+			txtFoundAge.Name = "txtFoundAge";
+			txtFoundAge.Size = new Size(153, 27);
+			txtFoundAge.TabIndex = 27;
+			// 
+			// txtFoundName
+			// 
+			txtFoundName.Location = new Point(132, 132);
+			txtFoundName.Margin = new Padding(3, 4, 3, 4);
+			txtFoundName.Name = "txtFoundName";
+			txtFoundName.Size = new Size(153, 27);
+			txtFoundName.TabIndex = 26;
+			// 
+			// Form1
+			// 
+			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(1109, 684);
+			Controls.Add(Tab);
+			Name = "Form1";
+			Text = "Form1";
+			Load += Form1_Load_1;
+			Tab.ResumeLayout(false);
+			lostTab.ResumeLayout(false);
+			lostTab.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBoxLost).EndInit();
+			lostAllTab.ResumeLayout(false);
+			lostAllTab.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewLostAll).EndInit();
+			foundAllTab.ResumeLayout(false);
+			foundAllTab.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewFoundAll).EndInit();
+			foundTab.ResumeLayout(false);
+			foundTab.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBoxFound).EndInit();
+			ResumeLayout(false);
+		}
 
-        #endregion
+		#endregion
 
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private TextBox textBox10;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private Label label11;
-        private Label label9;
-        private Label label8;
-        private Label label7;
+		private TabControl Tab;
+        private TabPage lostTab;
+        private TabPage lostAllTab;
+        private TextBox txtLostLocation;
+        private TextBox txtDateLost;
+        private TextBox txtLostBreed;
+        private TextBox txtLostColour;
+        private TextBox txtLostAge;
+        private TextBox txtLostName;
+        private Label lblDateLost;
+        private Label lblLostBreed;
+        private Label lblLostColour;
+        private Label lblLostAge;
+        private Label lblLostName;
+        private Label lblLostTitle;
+        private TextBox txtLostDesc;
+        private PictureBox pictureBoxLost;
+        private Button buttonSaveLost;
+        private Label lblLostDesc;
+        private Label lblLostGender;
+        private Label lblLostSpecies;
+        private Label lblLostLocation;
         private LinkLabel linkLabel1;
-        private DataGridView dataGridView1;
-        private Label label12;
-        private TabPage tabPage3;
-        private Label label13;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridViewLostAll;
         private LinkLabel linkLabel2;
         private DataGridView dataGridView4;
         private Button button3;
-        private Button button2;
+        private Button buttonSaveFound;
         private TextBox textBox26;
         private TextBox textBox25;
         private TextBox textBox24;
@@ -1056,45 +1170,69 @@
         private Label label15;
         private Label label14;
         private DataGridView dataGridView3;
-        private Button button5;
-        private Button button4;
-        private TextBox textBox18;
-        private TextBox textBox17;
-        private TextBox textBox16;
-        private TextBox textBox15;
-        private TextBox textBox14;
-        private TextBox textBox13;
-        private TextBox textBox12;
-        private TextBox textBox11;
-        private Label label29;
-        private Label label28;
-        private Label label27;
-        private Label label26;
-        private Label label25;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private TabPage tabPage4;
-        private TextBox textBox33;
-        private TextBox textBox32;
-        private TextBox textBox31;
-        private TextBox textBox30;
-        private TextBox textBox29;
-        private TextBox textBox28;
-        private TextBox textBox27;
-        private Label label37;
-        private Label label36;
-        private Label label35;
-        private Label label34;
-        private Label label33;
-        private Label label32;
-        private Label label31;
-        private Label label30;
-        private TextBox textBox34;
-        private TextBox textBox9;
-        private Label label38;
-        private Label label10;
-        private PictureBox pictureBox2;
-        private Button button6;
-    }
+        private TabPage foundTab;
+		private ComboBox boxLostSpecies;
+		private ComboBox boxLostGender;
+		private Button buttonLostImage;
+		private Button buttonLostSearch;
+		private ComboBox boxLostAllSpecies;
+		private ComboBox boxLostAllGender;
+		private Label lblLostAllGender;
+		private Label lblLostAllSpecies;
+		private Label lblLostAllLocation;
+		private Label label2;
+		private Label lblLostAllBreed;
+		private Label lblLostAllColour;
+		private Label lblLostAllAge;
+		private Label lblLostAllName;
+		private TextBox txtLostAllLocation;
+		private TextBox txtDateFoundAll;
+		private TextBox txtLostAllBreed;
+		private TextBox txtLostAllColour;
+		private TextBox txtLostAllAge;
+		private TextBox txtLostAllName;
+		private Label lblDateFoundAll;
+		private Label lblLostAllTitle;
+		private TabPage foundAllTab;
+		private Label lblFoundAllTitle;
+		private DataGridView dataGridViewFoundAll;
+		private Button buttonFoundSearch;
+		private ComboBox boxFoundAllSpecies;
+		private ComboBox boxFoundAllGender;
+		private Label lblFoundAllGender;
+		private Label lblFoundAllSpecies;
+		private Label lblFoundAllLocation;
+		private Label lblDateLostAll;
+		private Label lblFoundAllBreed;
+		private Label lblFoundAllColour;
+		private Label lblFoundAllAge;
+		private Label lblFoundAllName;
+		private TextBox txtFoundAllLocation;
+		private TextBox txtDateLostAll;
+		private TextBox txtFoundAllBreed;
+		private TextBox txtFoundAllColour;
+		private TextBox txtFoundAllAge;
+		private TextBox txtFoundAllName;
+		private ComboBox boxFoundSpecies;
+		private ComboBox boxFoundGender;
+		private Button buttonImageFound;
+		private PictureBox pictureBoxFound;
+		private Label lblFoundDesc;
+		private Label lblFoundGender;
+		private Label lblFoundSpecies;
+		private Label lblFoundLocation;
+		private Label lblFoundBreed;
+		private Label lblFoundColour;
+		private Label lblFoundAge;
+		private Label lblFoundName;
+		private Label lblFoundTitle;
+		private TextBox txtFoundDesc;
+		private TextBox txtFoundLocation;
+		private TextBox txtFoundBreed;
+		private TextBox txtFoundColour;
+		private TextBox txtFoundAge;
+		private TextBox txtFoundName;
+		private Label lblDateFound;
+		private TextBox txtDateFound;
+	}
 }
