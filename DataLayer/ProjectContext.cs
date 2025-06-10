@@ -29,17 +29,8 @@ namespace DataLayer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<LostAnimal>()
-       .HasOne<Location>()                // LostAnimal has one Location (no navigation property)
-       .WithMany()                       // Location has no collection navigation property
-       .HasForeignKey(l => l.LocationId) // foreign key on LostAnimal
-       .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<FoundAnimal>()
-       .HasOne<Location>()                // LostAnimal has one Location (no navigation property)
-       .WithMany()                       // Location has no collection navigation property
-       .HasForeignKey(l => l.LocationId) // foreign key on LostAnimal
-       .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<LostAnimal>().HasOne<Location>().WithMany().HasForeignKey(l => l.LocationId).OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<FoundAnimal>().HasOne<Location>().WithMany().HasForeignKey(l => l.LocationId).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

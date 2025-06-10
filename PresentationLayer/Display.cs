@@ -177,7 +177,7 @@ namespace PresentationLayer
                     if (lostAnimalToUpdate != null)
                     {
                         Console.WriteLine("Data for pet:");
-                        Console.WriteLine(lostAnimalToUpdate.ToString());
+                        Console.WriteLine(lostAnimalToUpdate.Print(locationController.Get(lostAnimalToUpdate.LocationId)));
                         Console.Write("Do you wish to proceed and edit the information? (Y/N): ");
                         string input = Console.ReadLine().ToLower();
 
@@ -279,7 +279,7 @@ namespace PresentationLayer
                     if (lostAnimalToDelete != null)
                     {
                         Console.WriteLine("Data for pet:");
-                        Console.WriteLine(lostAnimalToDelete.ToString());
+                        Console.WriteLine(lostAnimalToDelete.Print(locationController.Get(lostAnimalToDelete.LocationId)));
                         Console.Write("Do you wish to proceed and delete the information about the pet? (Y/N): ");
                         string input = Console.ReadLine().ToLower();
 
@@ -310,7 +310,7 @@ namespace PresentationLayer
 
                     foreach (var animal in lostAnimalController.GetAll())
                     {
-                        Console.WriteLine(animal.ToString());
+                        Console.WriteLine(animal.Print(locationController.Get(animal.LocationId)));
                     }
 
                     if (lostAnimalController.GetAll().Count == 0)
@@ -354,7 +354,7 @@ namespace PresentationLayer
                         {
                             if (animal.LocationId == locationToFetch.Id)
                             {
-                                Console.WriteLine(animal.ToString());
+                                Console.WriteLine(animal.Print(locationController.Get(animal.LocationId)));
                                 count++;
                             }
                         }
@@ -575,7 +575,7 @@ namespace PresentationLayer
                             {
                                 if ((hasName == true && animal.Name == name) || (hasAge == true && animal.Age == int.Parse(age)) || (hasBreed == true && animal.Breed == breed))
                                 {
-                                    Console.WriteLine(animal.ToString());
+                                    Console.WriteLine(animal.Print(locationController.Get(animal.LocationId)));
                                     matches.Add(animal);
                                 }
                             }
@@ -699,7 +699,7 @@ namespace PresentationLayer
                     if (foundAnimalToUpdate != null)
                     {
                         Console.WriteLine("Data for pet:");
-                        Console.WriteLine(foundAnimalToUpdate.ToString());
+                        Console.WriteLine(foundAnimalToUpdate.Print(locationController.Get(foundAnimalToUpdate.LocationId)));
                         Console.Write("Do you wish to proceed and edit the information? (Y/N): ");
                         string input = Console.ReadLine().ToLower();
 
@@ -805,7 +805,7 @@ namespace PresentationLayer
                     if (foundAnimalToDelete != null)
                     {
                         Console.WriteLine("Data for pet:");
-                        Console.WriteLine(foundAnimalToDelete.ToString());
+                        Console.WriteLine(foundAnimalToDelete.Print(locationController.Get(foundAnimalToDelete.LocationId)));
                         Console.Write("Do you wish to proceed and delete the information about the pet? (Y/N): ");
                         string input = Console.ReadLine().ToLower();
 
@@ -836,7 +836,7 @@ namespace PresentationLayer
 
                     foreach (var animal in foundAnimalController.GetAll())
                     {
-                        Console.WriteLine(animal.ToString());
+                        Console.WriteLine(animal.Print(locationController.Get(animal.LocationId)));
                     }
 
                     if (foundAnimalController.GetAll().Count == 0)
@@ -879,7 +879,7 @@ namespace PresentationLayer
                         {
                             if (animal.LocationId == locationToFetch.Id)
                             {
-                                Console.WriteLine(animal.ToString());
+                                Console.WriteLine(animal.Print(locationController.Get(animal.LocationId)));
                                 count += 1;
                             }
                         }

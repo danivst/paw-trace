@@ -37,15 +37,13 @@ namespace BusinessLayer
 		{
             if (location.Id != 0)
             {
-                // Already exists in DB, do nothing
                 return;
             }
 
             location.City = location.City.ToUpper();
             location.Country = location.Country.ToUpper();
 
-            bool exists = context.Locations
-                .Any(l => l.City.ToUpper() == location.City && l.Country.ToUpper() == location.Country);
+            bool exists = context.Locations.Any(l => l.City.ToUpper() == location.City && l.Country.ToUpper() == location.Country);
 
             if (!exists)
             {
@@ -79,8 +77,7 @@ namespace BusinessLayer
             city = city.ToUpper();
             country = country.ToUpper();
 
-            var existing = context.Locations
-                .FirstOrDefault(l => l.City.ToUpper() == city && l.Country.ToUpper() == country);
+            var existing = context.Locations.FirstOrDefault(l => l.City.ToUpper() == city && l.Country.ToUpper() == country);
 
             if (existing != null)
                 return existing;
@@ -90,7 +87,7 @@ namespace BusinessLayer
             context.Locations.Add(newLocation);
             context.SaveChanges();
 
-            return newLocation; // EF now tracks newLocation with generated Id
+            return newLocation;
         }
     }
 }

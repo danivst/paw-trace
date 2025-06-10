@@ -43,14 +43,14 @@ namespace DataLayer.Models
 
         public byte[]? Image { get; set; }
 
-        public override string ToString()
+        public string Print(Location location)
         {
-            return $"{Id}.\n" + 
+            return $"{Id}.\n" +
                    $"Name: {Name}\n" +
                    $"Age: {(Age == 0 ? "-" : Age.ToString())}\n" +
                    $"Gender: {Gender}\n" +
                    $"Color: {Color}\n" +
-                   $"Location: {LocationId}\n" +
+                   $"Location: {location.ToString()}\n" +
                    $"Date lost: {DateLost}\n" +
                    $"Species: {Species}\n" +
                    $"Breed: {(string.IsNullOrWhiteSpace(Breed) ? "-" : Breed)}\n" +
