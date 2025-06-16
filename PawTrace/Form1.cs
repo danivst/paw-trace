@@ -163,6 +163,23 @@ namespace PawTrace
             }
         }
 
+        private void boxFoundGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectGender = boxFoundGender.SelectedItem.ToString();
+            if (selectGender == "Male")
+            {
+                foundTab.BackColor = Color.LightBlue;
+            }
+            else if (selectGender == "Female")
+            {
+                foundTab.BackColor = Color.MistyRose;
+            }
+            else
+            {
+                foundTab.BackColor = Color.AntiqueWhite;
+            }
+        }
+
         private void ResetSelectFound()
         {
             dataGridViewFoundAll.ClearSelection();
@@ -278,7 +295,7 @@ namespace PawTrace
                 dataGridViewFoundAll.ClearSelection();
                 dataGridViewFoundAll.Rows[e.RowIndex].Selected = true;
 
-                var animal = dataGridViewLostAll.SelectedRows[0].Cells;
+                var animal = dataGridViewFoundAll.SelectedRows[0].Cells;
                 int id = int.Parse(animal[0].Value.ToString());
 
                 if (foundAnimalController.Get(id).Image == null)
@@ -609,7 +626,6 @@ namespace PawTrace
                     query = query.Where(a => a.Age == age);
                 }
 
-                query = query.Where(a => a.Name.ToLower().Contains(name));
                 query = query.Where(a => a.Color.ToLower().Contains(color));
                 query = query.Where(a => a.Gender == gender.Value);
                 query = query.Where(a => a.Species == species.Value);
@@ -625,12 +641,24 @@ namespace PawTrace
 
         private void buttonMarkLost_Click(object sender, EventArgs e)
         {
-            if (dataGridViewLostAll.SelectedRows.Count > 0)
+            if (dataGridViewFoundAll.SelectedRows.Count > 0)
             {
-                var animal = dataGridViewLostAll.SelectedRows[0].Cells;
+                var animal = dataGridViewFoundAll.SelectedRows[0].Cells;
                 int id = int.Parse(animal[0].Value.ToString());
+
+                FoundAnimal animalToDelete = foundAnimalController.Get(id);
+
+                int locationToDelete = animalToDelete.LocationId;
+
                 foundAnimalController.Delete(id);
-                LoadDataLost();
+
+                bool locationIsUsed = foundAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
+                if (!locationIsUsed)
+                {
+                    locationController.Delete(locationToDelete);
+                }
+
+                LoadDataFound();
                 ResetSelectFound();
                 buttonMarkLost.Visible = false;
             }
@@ -642,7 +670,19 @@ namespace PawTrace
             {
                 var animal = dataGridViewLostAll.SelectedRows[0].Cells;
                 int id = int.Parse(animal[0].Value.ToString());
+
+                LostAnimal animalToDelete = lostAnimalController.Get(id);
+
+                int locationToDelete = animalToDelete.LocationId;
+
                 lostAnimalController.Delete(id);
+
+                bool locationIsUsed = lostAnimalController.GetAll().Any(a => a.LocationId.Equals(locationToDelete));
+                if (!locationIsUsed)
+                {
+                    locationController.Delete(locationToDelete);
+                }
+
                 LoadDataLost();
                 ResetSelectLost();
                 buttonMarkFound.Visible = false;

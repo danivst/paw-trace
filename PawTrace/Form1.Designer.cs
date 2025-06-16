@@ -960,6 +960,7 @@
             boxFoundGender.Name = "boxFoundGender";
             boxFoundGender.Size = new Size(133, 23);
             boxFoundGender.TabIndex = 46;
+            boxFoundGender.SelectedIndexChanged += boxFoundGender_SelectedIndexChanged;
             // 
             // buttonImageFound
             // 

@@ -189,7 +189,7 @@ namespace PawTrace.Test
         }
 
         [Test]
-        public void GetAllLostAnimals_ReturnsLocations()
+        public void GetAllLostAnimals_ReturnsLostAnimals()
         {
             var all = lostAnimalController.GetAll();
             Assert.AreEqual(1, all.Count);
@@ -269,7 +269,7 @@ namespace PawTrace.Test
         }
 
         [Test]
-        public void GetAllFoundAnimals_ReturnsLocations()
+        public void GetAllFoundAnimals_ReturnsFoundAnimals()
         {
             var all = foundAnimalController.GetAll();
             Assert.AreEqual(1, all.Count);
